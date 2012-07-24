@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+
+<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Admin Base - Documentation</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- CSS : implied media="all" -->
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/grid.css" rel="stylesheet" type="text/css" />
+<link href="../css/base.css" rel="stylesheet" type="text/css" />
+<link href="../css/forms.css" rel="stylesheet" type="text/css" />
+<link href="../css/lists.css" rel="stylesheet" type="text/css" />
+<link href="../css/gallery.css" rel="stylesheet" type="text/css" />
+<link href="../css/calendar.css" rel="stylesheet" type="text/css" />
+<link href="../css/extensions.css" rel="stylesheet" type="text/css" />
+
+<!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+<script src="../js/modernizr-1.5.min.js"></script>
+<link href="syntaxhighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
+<script src="syntaxhighlighter/scripts/shCore.js"></script>
+<script src="syntaxhighlighter/scripts/shBrushJScript.js"></script>
+<script src="syntaxhighlighter/scripts/shBrushXml.js"></script>
+<link href="syntaxhighlighter/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+     SyntaxHighlighter.all()
+</script>
+</head>
+
+<body class="sidebar-left docs">
+
+<!-- header -->
+<div class="header-middle">
+<h1>Admin Base - Documentation</h1>
+</div>
+<!-- header end -->
+<div id="page">
+  <aside>
+    <div class="border-bottom margin-bottom margin-top">
+      <h2>Contents</h2>
+    </div>
+    <br />
+    <ul class="filetree">
+      <li><a href="index.html"><img src="../img/icons/16/information.png">About</a></li>
+      <li><a href="files.html"><img src="../img/icons/16/page_white_stack.png">Files</a></li>
+      <li class="closed"><span class="folder">Template Structure</span>
+        <ul>
+          <li><a href="template.html#html">HTML5</a></li>
+          <li><a href="template.html#grid">Fluid Grid</a></li>
+          <li><a href="template.html#fonts">Fonts</a></li>
+          <li><a href="template.html#special">Special Pages</a></li>
+        </ul>
+      </li>
+      <li class="closed"><span class="folder">CSS Elements</span>
+        <ul>
+          <li><a href="css.html#generic">Generic Classes</a></li>
+          <li><a href="css.html#blocks">Content Blocks</a></li>
+          <li><a href="css.html#calendar">Calendar</a></li>
+          <li><a href="css.html#list">Lists</a></li>
+          <li><a href="css.html#form">Forms</a></li>
+          <li><a href="css.html#gallery">Gallery</a></li>
+        </ul>
+      </li>
+      <li><span class="folder">Functions</span>
+        <ul>
+          <li><a href="functions.html#sidebar">Sidebar</a></li>
+          <li><a href="functions.html#tooltips">Toolips</a></li>
+          <li><a href="functions.html#tabs">Tabs</a></li>
+          <li><a href="functions.html#charts">Charts</a></li>
+        </ul>
+      </li>
+      <li><a href="credits.html"><img src="../img/icons/16/asterisk_yellow.png">Credits</a></li>
+    </ul>
+  </aside>
+  <div id="page-content" class="container_12"> <a href="#" id="open_sidebar">Open Sidebar</a>
+    <div id="page-header">
+      <h2>Documentation - Functions</h2>
+    </div>
+    <section class="grid_12">
+    <h3><a id="sidebar">Sidebar</a></h3>
+    <p>The sidebar is has built in functionality so that it can be turned on and off by the user and the preference is remembered in a cookie. The sidebar can also be configured to the left or the right by changing the class on the body to either sidebar-left or sidebar-right. Some clever CSS handles the rest.</p>
+       <h3><a id="tooltips">Tooltips</a></h3>
+    <p>Admin Base uses the excellent tipsy tooltips plug-in to show tooltips. I've built a couple of inbuilt classes to help you get the most configurability out of the plugin. To add a tooltip to something simply add the class "tooltip" and add the tooltip text in the title attribute of the tag. So take this for example:</p>
+    <section class="grid_6"> 
+      <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+
+<a title="Edit Page" class="tooltip" href="#"><img src="./img/icons/16/page_edit.png" alt="edit page"></a>
+
+]]></script> 
+    </section>
+    <section class="grid_6 tc"> <a title="Edit Page" class="tooltip" href="#"><img src="./img/icons/16/page_edit.png" alt="edit page"></a> </section>
+    <br class="cl /">
+    <br />
+    <p>You can configure how the tooltip shows more extensively by adding polar directions to class. So for example adding the class " tipsy-north" will make your tooltip appear above the object instead of the default below.</p>
+    <p>Tooltips can also be used on forms to add a hint for users.</p>
+    <section class="grid_6"> 
+      <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+
+<form class="form" action="">
+<input type="text" name="field" id="field" title="Please enter your name" value="Hover over me" />
+</form>
+
+]]></script> 
+    </section>
+    <section class="grid_6 tc">
+      <form class="form" action="">
+        <input type="text" name="field" id="field" title="Please enter your name" value="Hover over me" />
+      </form>
+    </section>
+    <br class="cl /">
+    <br />
+    <h3><a id="tabs">Tabs</a></h3>
+    <p>This template utilizes the jQuery UI framework for the tab functionality. The basic markup is given below. The same can be applied to the content block examples found in the CSS elements pages.</p>
+    <section class="grid_6"> 
+      <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+
+<!-- The surrounding element must have a unique ID -->
+<section id="demotabs" class="grid_6">
+
+        <div class="box-header">
+         Box Header
+          <ul class="tabs">
+            <li><a href="#tab1" class="active">Tab 1</a></li>
+            <li><a href="#tab2">Tab 2</a></li>
+            <li><a href="#tab3">Tab 3</a></li>
+            <li><a href="#" class="disable">Disabled</a></li>
+            <li><a href="#" title="Add Tab" class="img tooltip north"><img alt="" src="./img/icons/16/add.png"></a></li>
+          </ul>
+        </div>
+        <div id="tab1" class="box-content">
+          <p>Tab 1 Box</p>
+        </div>
+        <div id="tab2" class="box-content">
+          <p>Tab 2 Box</p>
+        </div>
+        <div id="tab3" class="box-content">
+          <p>Tab 3 Box</p>
+      </div>
+
+</section>
+
+]]></script> 
+    </section>
+    <section id="demotabs" class="grid_6">
+        <div class="box-header">
+         Box Header
+          <ul class="tabs">
+            <li><a href="#tab1" class="active">Tab 1</a></li>
+            <li><a href="#tab2">Tab 2</a></li>
+            <li><a href="#tab3">Tab 3</a></li>
+            <li><a href="#" class="disable">Disabled</a></li>
+            <li><a href="#" title="Add Tab" class="img tooltip north"><img alt="" src="./img/icons/16/add.png"></a></li>
+          </ul>
+        </div>
+        <div id="tab1" class="box-content">
+          <p>Tab 1 Box</p>
+        </div>
+        <div id="tab2" class="box-content">
+          <p>Tab 2 Box</p>
+        </div>
+        <div id="tab3" class="box-content">
+          <p>Tab 3 Box</p>
+        </div>
+    </section>
+    <br class="cl /">
+    <br />
+    <p>You must also add the JS so the tab functionality will be added by jQuery UI.</p>
+    <script type="syntaxhighlighter" class="brush: js"><![CDATA[
+
+$("#demotabs").tabs();
+
+
+]]></script>
+    <p>Further demos and documentation can be found here: http://jqueryui.com/demos/tabs/</p>
+    <br />
+    <h3><a id="charts">Charts</a></h3>
+    <p>Admin Base uses the Google visualizations library (http://code.google.com/apis/charttools/index.html) to visualize data. It's quite simple to setup and customize. You can see an example on the dashboard preview. I've also included a bit of JavaScript that resizes the chart if you change the width of the browser (or use the dynamic width feature of the template).</p>
+    <h4>Demo Chart</h4>
+    <p>Here is an example chart using the Google visualizations library. You can find a preview of it setup on the dashboard/index page. Firstly place your container div where you're chart will be generated:</p>
+    <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+
+<div id="chart_div"></div>
+
+]]></script>
+    <p>The add the JS at the bottom of the page:</p>
+    <script type="syntaxhighlighter" class="brush: js"><![CDATA[
+
+<script type="text/javascript">
+    
+      // Load the Visualization API and the piechart package.
+      google.load('visualization', '1', {'packages':['corechart']});
+      
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.setOnLoadCallback(drawChart);
+      
+
+	  
+	  // Handle viewport resizing
+						var previousWidth = $(window).width();
+						$(window).resize(function()
+						{
+							if (previousWidth != $(window).width())
+							{
+								drawChart();
+								previousWidth = $(window).width();
+							}
+						});
+						
+	      // Callback that creates and populates a data table, 
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+      // Create our data table.
+  var countries =
+    ['Unique Visits', 'Page Views'];
+  var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
+  var productionByCountry = [[165, 135, 157, 139, 136, 165],
+                             [186, 164, 172, 165, 155, 180]];
+
+  // Create and populate the data table.
+  var data = new google.visualization.DataTable();
+  data.addColumn('string', 'Month');
+  for (var i = 0; i < countries.length; ++i) {
+    data.addColumn('number', countries[i]);
+  }
+  data.addRows(months.length);
+  for (var i = 0; i < months.length; ++i) {
+    data.setCell(i, 0, months[i]);
+  }
+  for (var i = 0; i < countries.length; ++i) {
+    var country = productionByCountry[i];
+    for (var month = 0; month < months.length; ++month) {
+      data.setCell(month, i + 1, country[month]);
+    }
+  }
+
+        // Instantiate and draw our chart, passing in some options.
+		var div = $('#chart_div');
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, {width: div.width(), height: 350, is3D: true, title: '6 Month Traffic Report', hAxis: {title: "Month"}, vAxis: {title: "Views"}});
+      }
+  
+
+
+
+]]></script>
+    <p>You must also add the class "chart" to the body tag". This enables related functions to become active.</p>
+    <br class="cl" />
+    </section>
+  </div>
+</div>
+
+<!-- footer -->
+<footer> Copyright ©2010, A <a href="http://iamchrismooney.com">Chris Mooney</a> for <a href="http://themeforest.net?ref=ChrisMooney">Theme Forest</a>. </footer>
+<!-- footer end --> 
+
+<!-- Javascript at the bottom for fast page loading --> 
+<script type="text/javascript" src="http://www.google.com/jsapi"></script> 
+<!-- Grab Google CDN's jQuery + jQuery UI. fall back to local if necessary --> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+<script>!window.jQuery && document.write('<script src="../js/jquery-1.4.2.min.js"><\/script>')</script> 
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script> 
+<script>!window.jQuery && document.write('<script src="../js/jquery-ui-1.8.1.min.js"><\/script>')</script> 
+<script type="text/javascript" src="../js/jquery.tipsy.js"></script> 
+<script type="text/javascript" src="../js/jquery.treeview.min.js"></script> 
+<script type="text/javascript" src="../js/jquery.cookie.js"></script> 
+<script type="text/javascript" src="../js/jquery.lightbox-0.5.min.js"></script> 
+<script type="text/javascript" src="../js/jquery.wysiwyg.js"></script> 
+<script type="text/javascript" src="../js/functions.js"></script> 
+<!--[if lt IE 7 ]>
+    <script src="js/dd_belatedpng.js"></script>
+  <![endif]-->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-587119-24']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

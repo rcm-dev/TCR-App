@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rsCitizen" value="name:citizen_id;datatype:int,name:citizen_name;datatype:string" />
+	<infoitem key="UD_rsState" value="name:state_id;datatype:int,name:state_name;datatype:string" />
+	<infoitem key="UD_rsCitizen2" value="name:citizen_id;datatype:int,name:citizen_name;datatype:string" />
+	<infoitem key="UD_rsServices" value="name:service_id;datatype:int,name:service_name;datatype:string,name:start_time;datatype:string,name:end_time;datatype:string" />
+</info>

@@ -1,0 +1,301 @@
+/* 
+Admina Template
+Author: Chris Mooney (http://themeforest.net/user/ChrisMooney)
+
+calendars.css - CSS for calendar components
+*/
+
+.calendar-controls {
+	text-align: center;
+	padding: 8px;
+	border: 1px solid #0098c2;
+	border-bottom: 1px solid #006c89;
+	border-radius: 3px 3px 0px 0px;
+	-moz-border-radius: 3px 3px 0px 0px;
+	-webkit-border-radius: 3px 3px 0px 0px;
+	color: #fff;
+	background-image:url("../img/grad.png");
+	background-position:center top;
+	background-repeat:repeat-x;
+	background-color:#00A1CD;
+	font-weight: 700;
+	font-size:108%;
+	text-shadow:0 -1px 0 #006C89;
+}
+.calendar-controls .calendar-prev {
+	float: left;
+}
+.calendar-controls .calendar-next {
+	float: right;
+}
+/*////   - Mini Calendar -   ////*/
+
+.mini-calendar {
+	position: relative;
+	margin-bottom:20px;
+}
+.mini-calendar .calendar-controls {
+	width:200px;
+}
+.mini-calendar table {
+	border: 1px solid #cccccc;
+	border-collapse: separate;
+}
+.mini-calendar thead th, .mini-calendar thead td {
+	padding:5px 2px;
+	text-align: center;
+	vertical-align: bottom;
+	font-weight: normal;
+	color: #666;
+	background:url("../img/boxheader.gif") repeat-x scroll center top #E2E2E2;
+	border-bottom: 1px solid #cccccc;
+}
+.mini-calendar tbody th, .mini-calendar tbody td {
+	text-align: center;
+	vertical-align: middle;
+	color: #333333;
+	border-right: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+}
+.mini-calendar tbody th, .mini-calendar tbody td {
+	font-size:93%;
+	height:30px;
+	width:30px;
+}
+.mini-calendar tbody th.other-month, .mini-calendar tbody td.other-month {
+	color:#ccc;
+}
+.mini-calendar tbody th.last, .mini-calendar tbody td.last {
+	border-right: 0;
+}
+.mini-calendar tbody tr.last td {
+	border-bottom: 0;
+}
+.mini-calendar tbody a, .mini-calendar tbody div {
+	display: block;
+	position: relative;
+	height: 100%;
+}
+.mini-calendar tbody a {
+	color: #181818;
+	text-decoration:none;
+}
+.mini-calendar tbody a, .mini-calendar tbody div {
+	line-height: 240%;
+}
+.mini-calendar td.today a, .mini-calendar td a:hover {
+	color: #fff;
+	background-color:#00A1CD;
+	background-image:url("../img/grad.png");
+	background-position:center bottom;
+	background-repeat:repeat-x;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.4) inset;
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4) inset;
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4) inset;
+}
+/*////   - Medium Calendar -   ////*/
+
+
+.medium-calendar {
+	position: relative;
+	margin-bottom:20px;
+	width:400px;
+}
+.medium-calendar table {
+	border: 1px solid #cccccc;
+	border-collapse: separate;
+	width: 100%;
+}
+.medium-calendar thead th, .medium-calendar thead td {
+	padding:5px 2px;
+	text-align: center;
+	vertical-align: bottom;
+	font-weight: normal;
+	color: #666;
+	background:url("../img/boxheader.gif") repeat-x scroll center top #E2E2E2;
+	border-bottom: 1px solid #cccccc;
+	padding-bottom: 5px;
+	border-right: 1px solid #cccccc;
+}
+.medium-calendar tbody th.last, .medium-calendar tbody td.last {
+	border-right: 0;
+}
+.medium-calendar tbody tr.last td {
+	border-bottom: 0;
+}
+.medium-calendar tbody th.other-month, .medium-calendar tbody td.other-month {
+	color:#ccc;
+}
+.medium-calendar tbody th, .medium-calendar tbody td {
+	width: 14%;
+	height:40px;
+	font-weight: 700;
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	text-align: center;
+	vertical-align: middle;
+}
+.medium-calendar tbody tr.alt {
+	background: #f2f2f2;
+}
+.medium-calendar tbody a {
+	display: block;
+	position: relative;
+	height: 100%;
+	line-height: 325%;
+	text-decoration:none;
+	color:#181818;
+}
+.medium-calendar tbody a:hover, .medium-calendar tbody td.today a {
+	box-shadow:0 0 5px rgba(0, 0, 0, 0.4) inset;
+	-moz-box-shadow:0 0 5px rgba(0, 0, 0, 0.4) inset;
+	-webkit-box-shadow:0 0 5px rgba(0, 0, 0, 0.4) inset;
+	background-color:#00A1CD;
+	background-image:url("../img/grad.png");
+	background-position:center bottom;
+	background-repeat:repeat-x;
+	color:#FFFFFF;
+}
+.medium-calendar tbody td.today {
+	border:none;
+}
+.medium-calendar .events {
+	position: absolute;
+	right:2px;
+	top:0;
+	font-size: 85%;
+	line-height: 1.111em;
+	padding: 1px 4px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	color: #fff;
+	font-weight:normal;
+	background:#404040 url('../img/grad.png') repeat-x bottom;
+	border-width:2px;
+	border-style:groove;
+	border:1px solid rgba(0, 0, 0, 0.2);
+	box-shadow:0px 1px 0px rgba(225, 225, 225, 0.5) inset;
+	-moz-box-shadow:0px 1px 0px rgba(225, 225, 225, 0.5) inset;
+	-webkit-box-shadow:0px 1px 0px rgba(225, 225, 225, 0.5) inset;
+}
+.ie7 .medium-calendar .events, .ie8 .medium-calendar .events {
+ border-width:1px;
+ border-style:solid;
+}
+.medium-calendar .events.blue {
+	background-color:#00A1CD;
+}
+.medium-calendar .events.green {
+	background-color:#20c00f;
+}
+.medium-calendar .events.red {
+	background-color:#c00f0f;
+}
+.medium-calendar .events.grey {
+	background-color:#eee;
+	color:#4d4d4d !important;
+	text-shadow:0 -1px 1px #fff;
+}
+/*////   - Full Calendar -   ////*/
+
+
+
+
+
+.calendar {
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	width: 100%;
+	border-collapse: separate;
+	border-radius:3px 3px 0 0;
+	-moz-border-radius:3px 3px 0 0;
+	-webkit-border-radius:3px 3px 0 0;
+}
+.calendar thead th, .calendar thead td {
+	border-bottom: 1px solid #006c89;
+	border-right: 1px solid #0084a8;
+	color: #fff;
+	background-image:url("../img/grad.png");
+	background-position:center top;
+	background-repeat:repeat-x;
+	background-color:#00A1CD;
+	font-weight: 700;
+	font-size:108%;
+	text-shadow:0 -1px 0 #006C89;
+	vertical-align: middle;
+	text-align: center;
+	padding: 8px;
+}
+.calendar tbody th, .calendar tbody td {
+	background: #fff;
+	text-align: center;
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	text-align: left;
+	vertical-align: top;
+	padding: 5px;
+	width: 14%;
+	height: 100px;
+}
+.calendar tbody tr.last td {
+	border-bottom: 0;
+}
+.calendar tbody tr.alt td {
+	background: #f2f2f2;
+}
+.calendar tbody .other-month, .calendar tbody .other-month a {
+	color: #CCCCCC;
+	font-weight:700;
+}
+.calendar .other-month .day {
+	color: #CCCCCC;
+}
+.calendar a {
+	display: block;
+	float: left;
+	font-size: 100%;
+	line-height: 1.222em;
+	font-weight: 700;
+	text-decoration:none;
+	color: #333333;
+}
+.calendar tbody tr td:hover, .calendar tbody .today {
+	color:#fff;
+	background-color:#00A1CD;
+	background-image:url("../img/grad.png");
+	background-position:center bottom;
+	background-repeat:repeat-x;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.4) inset;
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4) inset;
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4) inset;
+}
+.calendar tbody .today a, .calendar tbody td:hover > a {
+	color:#fff;
+}
+.calendar tbody td:hover .event time {
+	color:#fff;
+}
+.calendar .evenst {
+	clear: both;
+	line-height: 118%;
+}
+.calendar .events time {
+	font-size:85%;
+	margin-right:15px;
+	color:#00A1CD;
+}
+.calendar .events time.green {
+	color:#157e0b;
+}
+.calendar .events time.red {
+	color:#C00F0F;
+}
+.calendar .events {
+	font-size:85%;
+	list-style:none outside none;
+	margin:22px 0 0;
+}
+.calendar .events li {
+	margin-bottom:2px;
+}

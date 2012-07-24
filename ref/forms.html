@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+
+<title>Admin Base - Forms</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Make sure the latest version of IE is used -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<!-- Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references -->
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- CSS - Setup -->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/grid.css" rel="stylesheet" type="text/css" />
+<!-- CSS - Styles -->
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<link href="css/forms.css" rel="stylesheet" type="text/css" />
+<link href="css/lists.css" rel="stylesheet" type="text/css" />
+<link href="css/calendar.css" rel="stylesheet" type="text/css" />
+<link href="css/extensions.css" rel="stylesheet" type="text/css" />
+<link href="css/visualize.css" rel="stylesheet" type="text/css" />
+
+<!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+<script src="js/modernizr-1.5.min.js"></script>
+</head>
+
+<body class="sidebar-left">
+<header>
+  <div class="header-top tr">
+    <p>Hello <strong>John Doe</strong> | You have <a href="#" id="opener" class="strong">1 new message</a> | <a href="#">Settings</a> | <a href="#">Logout</a></p>
+    </div>
+  <div class="header-middle"> 
+    <!-- Start Nav -->
+    <ul id="nav" class="fr ">
+      <!-- Nav - Start Help -->
+      <li class="help"><a class="help" href="#">Help</a>
+        <ul>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Forums</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </li>
+      <!-- Nav - End Help --> 
+      <!-- Nav - Start Settings -->
+      <li class="settings"><a class="settings" href="#">Settings</a>
+        <ul>
+          <li><a href="#">System Settings</a></li>
+          <li><a href="#">Server Setup</a></li>
+        </ul>
+      </li>
+      <!-- Nav - End Settings --> 
+      <!-- Nav - Start Users -->
+      <li class="users"><a class="users" href="#">Users</a>
+        <ul>
+          <li><a href="#">User Manager</a></li>
+          <li><a href="#">Manage Users  &raquo;</a>
+            <ul>
+              <li><a href="#">Add User</a></li>
+              <li><a href="#">Edit User</a></li>
+              <li><a href="#">Delete User</a></li>
+            </ul>
+          </li>
+          <li><a href="#">User Reports</a></li>
+          <li><a href="#">Usergoups</a></li>
+        </ul>
+      </li>
+      <!-- Nav - End Users --> 
+      <!-- Nav - Start Content -->
+      <li class="content"><a class="content" href="#">Content</a>
+        <ul>
+          <li><a href="#">Manage Pages  &raquo;</a>
+            <ul>
+              <li><a href="#">Add Page  &raquo;</a>
+                <ul>
+                  <li><a href="#">HTML Page</a></li>
+                  <li><a href="#">Widget Page</a></li>
+                  <li><a href="#">Custom Page</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Edit Page</a></li>
+              <li><a href="#">Delete Page</a> </li>
+            </ul>
+          </li>
+          <li><a href="#">Page Statstics</a></li>
+          <li><a href="#">Page Categories</a></li>
+          <li><a href="#">Page Tags</a></li>
+        </ul>
+      </li>
+      <!-- Nav - End Content --> 
+      <!-- Nav - Start Help -->
+      <li class="dashboard"><a class="dashboard" href="#">Dashboard</a></li>
+      <!-- Nav - End Dashboard -->
+    </ul>
+    <!-- End Nav --> 
+    <!-- Start Logo --> 
+    <img id="logo" src="img/logo.png" alt="Admin Theme" /> 
+    <!-- End Logo --> 
+    <br class="cl" />
+  </div>
+  <div class="header-bottom"> 
+    <!-- Start Breadcrumbs -->
+    <ul id="breadcrumbs">
+      <li><a href="#">Base</a> &raquo;</li>
+      <li><a href="#">Level One</a> &raquo;</li>
+      <li><a href="#">Level Two</a></li>
+    </ul>
+    <!-- End Breadcrumbs --> 
+  </div>
+</header>
+
+
+<div id="page">
+
+<aside>
+      <!-- Start Live Search  -->
+      <div class="block">
+      <form class="searchform" action="#">
+        <input id="livesearch" type="text" onBlur="if (this.value == '') {this.value = 'Live Search...';}" onFocus="if (this.value == 'Live Search...') {this.value = '';}" value="Live Search..." class="searchfield" />
+      </form>
+      </div>
+      
+         
+<ul id="sidebar-nav">
+<li><a href="#">Content</a>
+<ul class="drop" style="display: block;">
+  <li><a href="#"><img src="img/icons/16/page.png">Manage Pages</a></li>
+<li><a href="#"><img src="img/icons/16/page_add.png">Add Pages</a></li>
+<li><a href="#"><img src="img/icons/16/page_edit.png">Edit Pages</a></li>
+<li><a href="#"><img src="img/icons/16/page_delete.png">Delete Pages</a></li>
+</ul>
+</li>
+<li><a href="#">Comments</a>
+<ul class="drop">
+  <li><a href="#"><img src="img/icons/16/comments.png">Manage Comments</a></li>
+<li><a href="#"><img src="img/icons/16/comment_add.png">Add Comments</a></li>
+<li><a href="#"><img src="img/icons/16/comment_edit.png">Edit Comments</a></li>
+<li><a href="#"><img src="img/icons/16/comment_delete.png">Delete Comments</a></li>
+</ul>
+</li>
+<li><a href="#">Users</a>
+<ul class="drop">
+  <li><a href="#"><img src="img/icons/16/user.png">Manage Users</a></li>
+<li><a href="#"><img src="img/icons/16/user_add.png">Add Users</a></li>
+<li><a href="#"><img src="img/icons/16/user_edit.png">Edit Users</a></li>
+<li><a href="#"><img src="img/icons/16/user_delete.png">Delete Users</a></li>
+</ul>
+</li>
+<li><a href="#">Gallery</a>
+<ul class="drop">
+<li><a href="#"><img src="img/icons/16/image_manage.png">Manage Images</a></li>
+<li><a href="#"><img src="img/icons/16/image_add.png">Add Images</a></li>
+<li><a href="#"><img src="img/icons/16/image_edit.png">Edit Images</a></li>
+<li><a href="#"><img src="img/icons/16/image_delete.png">Delete Images</a></li>
+</ul>
+</li>
+</ul>
+<br /> <br /> 
+      <div class="block">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+</aside>
+
+
+<div id="page-content" class="container_12"> 
+<a href="#" id="close_sidebar" class="tooltip east" title="Close Sidebar"> Close Sidebar </a>
+<a href="#" id="open_sidebar" class="tooltip east" title="Open Sidebar">Open Sidebar</a>
+
+<div id="page-header">
+        <h1>Dashboard</h1>
+      </div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+
+<section class="grid_7">
+      <form method="post" class="form" action="">
+      <fieldset>
+        <legend>Simple Forms</legend>
+        <p>
+          <label for="City">Field:</label>
+          <input id="City" type="text" name="City" />
+        </p>
+        <p>
+          <label for="Name"><span class="required">*</span> Required:</label>
+          <input id="Name" type="text" name="Name" />
+        </p>
+        <p>
+          <label for="Email">Date:</label>
+          <input class="datepicker" id="Email" type="text" name="Email" />
+          <img src="./img/icons/24/calendar.png" alt="" /> </p>
+        <p>
+          <label for="Message">Message:</label>
+          <textarea id="Message" name="Message" rows="4" cols="20"></textarea>
+        </p>
+        <p>
+          <label for="Pellentesque">Drop Down:</label>
+          <select id="Pellentesque" size="1"  name="select">
+            <optgroup label="Lorem ipsum1">
+            <option selected="selected" value="1">Nunc urna nulla</option>
+            <option value="2">ultrices sit amet</option>
+            <option value="3">cursus faucibus</option>
+            <option value="4">tincidunt pellentesque</option>
+            <option value="5">ante</option>
+            </optgroup>
+            <optgroup label="Lorem ipsum2">
+            <option value="6">Nunc ac diam</option>
+            <option value="7">Donec orci risus</option>
+            <option value="8">malesuada quis</option>
+            <option value="9">vulputate eu</option>
+            <option value="10">lacinia in</option>
+            </optgroup>
+          </select>
+        </p>
+        <p class="inline">
+          <label>Lorem ipsum1:</label>
+          <label>
+            <input type="radio" name="radioSet" value="uno" />
+            Uno </label>
+          <label>
+            <input type="radio" name="radioSet"  value="due" />
+            Due </label>
+          <label>
+            <input type="radio" name="radioSet"  value="tre" />
+            Tre </label>
+        </p>
+        <p class="inline">
+          <label>Lorem ipsum2:</label>
+          <label>
+            <input type="checkbox" name="checkSet"  value="one" />
+            One</label>
+          <label>
+            <input type="checkbox" name="checkSet" value="two" />
+            Two</label>
+          <label>
+            <input type="checkbox" name="checkSet" value="three" />
+            Three </label>
+        </p>
+      </fieldset>
+        <fieldset id="formtabs">
+          <legend>Complex Forms</legend>
+          <div class="notification tip"> <span class="strong">Tip:</span> This is a tip message. </div>
+          <ul class="tabs">
+            <li><a href="#formtab1" class="active">Profile</a></li>
+            <li><a href="#formtab2">Settings</a></li>
+          </ul>
+          <div class="box-wrapper">
+            <div id="formtab1" class="box">
+              <p>
+                <label>Your Username is:</label>
+                <input id="Username" type="text" name="Username" value="JohnDoe" />
+              </p>
+              <p>
+                <label>You Age:</label>
+                <input class="small" id="Age" type="text" name="Age" />
+              </p>
+              <p>
+                <label>Bio:</label>
+                <textarea class="wysiwyg"> </textarea>
+                <span class="txt-lighter txt-smaller">Tell us about yourself.</span> </p>
+            </div>
+            <div id="formtab2" class="box">
+              <div class="notification warning"> <span class="strong">Warning:</span> Settings will not be saved. </div>
+              <p class="switch-wrapper small">
+                <label>Show new users?</label>
+                <input type="radio" checked="checked" name="field" id="yes1">
+                <input type="radio" name="field" id="no1">
+                <span class="switch-enable selected">Enable</span> <span class="switch-disable">Disable</span> </p>
+              <p class="switch-wrapper small">
+                <label>Email when registering?</label>
+                <input type="radio" name="field" id="yes2">
+                <input type="radio" checked="checked" name="field" id="no2">
+                <span class="switch-enable">Enable</span> <span class="switch-disable selected">Disable</span> </p>
+            </div>
+          </div>
+          <br class="cl" />
+          <p class="border-top strong tr no-margin">Form Progress:
+            <progress class="progress-bar blue"> <span style="width: 68%;">68%</span> </progress>
+            <br />
+          </p>
+        </fieldset>
+      </form>
+    </section>
+    <section class="grid_5">
+      <form method="post" class="form" action="">
+        <fieldset class="grey">
+          <legend><a class="collapse" href="#">Field Validation</a></legend>
+          <p>
+            <label for="Success">Success:</label>
+            <input class="success" id="Success" type="text" name="Success" />
+          </p>
+          <p>
+            <label for="Error">Error:</label>
+            <input class="error" id="Error" type="text" name="Error" />
+          </p>
+          <p>
+            <label for="Warning">Warning:</label>
+            <input class="warning" id="Warning" type="text" name="Warning" />
+          </p>
+          <p>
+            <label for="Info">Info:</label>
+            <input class="info" id="Info" type="text" name="Info" />
+          </p>
+          <p>
+            <label for="Tip">Tip:</label>
+            <input class="tip" id="Tip" type="text" name="Tip" />
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend><a class="collapse" href="#">Switches</a></legend>
+          <p class="switch-wrapper">
+            <label>Radio Switch:</label>
+            <input type="radio" checked="checked" name="field" id="yes3">
+            <input type="radio" name="field" id="no3">
+            <span class="switch-enable selected">Enable</span> <span class="switch-disable">Disable</span> </p>
+          <!-- Switch using a checkbox -->
+          <p class="switch-wrapper">
+            <label>Checkbox Switch:</label>
+            <span class="switch-enable"><span>On</span></span> <span class="switch-disable selected"><span>Off</span></span>
+            <input type="checkbox" name="field2" class="checkbox">
+          </p>
+          <!-- Small switch using radio inputs -->
+          <p class="switch-wrapper small">
+            <label>Mini Radio Switch:</label>
+            <input type="radio" checked="checked" name="field" id="yes4">
+            <input type="radio" name="field" id="no4">
+            <span class="switch-enable selected">Enable</span> <span class="switch-disable">Disable</span> </p>
+          <!-- Small switch using a checkbox -->
+          <p class="switch-wrapper small">
+            <label>Mini Radio Switch:</label>
+            <span class="switch-enable"><span>On</span></span> <span class="switch-disable selected"><span>Off</span></span>
+            <input type="checkbox" name="field2" class="checkbox">
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Buttons</legend>
+          <!-- Default Button -->
+          <button type="button">Button</button>
+          <!-- Blue button -->
+          <button class="blue" type="button">Button</button>
+          <!-- Green button -->
+          <button class="green" type="button">Button</button>
+          <!-- Red button -->
+          <button class="red" type="button">Button</button>
+          <!-- Grey button -->
+          <button class="grey" type="button">Button</button>
+          <!-- Disabled button -->
+          <button class="disabled" type="button">Button</button>
+          <!-- Large button -->
+          <button class="blue large" type="button">Button</button>
+          <!-- Small button -->
+          <button class="blue small" type="button">Button</button>
+          <!-- Button with image -->
+          <button class="blue" type="button"><img alt="rss" src="./img/icons/button/rss-inv.png"> RSS</button>
+        </fieldset>
+      </form>
+    </section>
+    <br class="cl" />
+
+
+</div>
+
+<!-- Start Footer -->
+<footer> Copyright ©2010, A <a href="http://iamchrismooney.com">Chris Mooney</a> for <a href="http://themeforest.net?ref=ChrisMooney">Theme Forest</a>. </footer>
+<!-- End Footer -->
+
+<!-- Javascript at the bottom for fast page loading --> 
+<script type="text/javascript" src="http://www.google.com/jsapi"></script> 
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/jquery-ui-1.8.1.min.js"></script> 
+<script type="text/javascript" src="js/jquery.tipsy.js"></script> 
+<script type="text/javascript" src="js/jquery.treeview.min.js"></script> 
+<script type="text/javascript" src="js/jquery.cookie.js"></script> 
+<script type="text/javascript" src="js/jquery.lightbox-0.5.min.js"></script> 
+<script type="text/javascript" src="js/jquery.wysiwyg.js"></script> 
+<script type="text/javascript" src="js/functions.js"></script> 
+<!--[if lt IE 7 ]>
+    <script src="js/dd_belatedpng.js"></script>
+  <![endif]--> 
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-587119-24']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

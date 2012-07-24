@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rsServices" value="name:service_id;datatype:int,name:service_name;datatype:string,name:start_time;datatype:string,name:end_time;datatype:string" />
+	<infoitem key="UD_rsAvailableServices" value="name:service_id;datatype:int,name:service_name;datatype:string,name:start_time;datatype:string,name:end_time;datatype:string" />
+</info>

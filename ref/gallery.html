@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+
+<title>Admin Base - Gallery</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Make sure the latest version of IE is used -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<!-- Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references -->
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- CSS - Setup -->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/grid.css" rel="stylesheet" type="text/css" />
+<!-- CSS - Styles -->
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<link href="css/forms.css" rel="stylesheet" type="text/css" />
+<link href="css/lists.css" rel="stylesheet" type="text/css" />
+<link href="css/calendar.css" rel="stylesheet" type="text/css" />
+<link href="css/extensions.css" rel="stylesheet" type="text/css" />
+<link href="css/visualize.css" rel="stylesheet" type="text/css" />
+
+<!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+<script src="js/modernizr-1.5.min.js"></script>
+</head>
+
+<body class="sidebar-left">
+<header>
+  <div class="header-top tr">
+    <p>Hello <strong>John Doe</strong> | You have <a href="#" id="opener" class="strong">1 new message</a> | <a href="#">Settings</a> | <a href="#">Logout</a></p>
+    </div>
+  <div class="header-middle"> 
+    <!-- Start Nav -->
+    <ul id="nav" class="fr ">
+      <!-- Nav - Start Help -->
+      <li class="help"><a class="help" href="#">Help</a>
+        <ul>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Forums</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </li>
+      <!-- Nav - End Help --> 
+      <!-- Nav - Start Settings -->
+      <li class="settings"><a class="settings" href="#">Settings</a>
+        <ul>
+          <li><a href="#">System Settings</a></li>
+          <li><a href="#">Server Setup</a></li>
+        </ul>
+      </li>
+      <!-- Nav - End Settings --> 
+      <!-- Nav - Start Users -->
+      <li class="users"><a class="users" href="#">Users</a>
+        <ul>
+          <li><a href="#">User Manager</a></li>
+          <li><a href="#">Manage Users  &raquo;</a>
+            <ul>
+              <li><a href="#">Add User</a></li>
+              <li><a href="#">Edit User</a></li>
+              <li><a href="#">Delete User</a></li>
+            </ul>
+          </li>
+          <li><a href="#">User Reports</a></li>
+          <li><a href="#">Usergoups</a></li>
+        </ul>
+      </li>
+      <!-- Nav - End Users --> 
+      <!-- Nav - Start Content -->
+      <li class="content"><a class="content" href="#">Content</a>
+        <ul>
+          <li><a href="#">Manage Pages  &raquo;</a>
+            <ul>
+              <li><a href="#">Add Page  &raquo;</a>
+                <ul>
+                  <li><a href="#">HTML Page</a></li>
+                  <li><a href="#">Widget Page</a></li>
+                  <li><a href="#">Custom Page</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Edit Page</a></li>
+              <li><a href="#">Delete Page</a> </li>
+            </ul>
+          </li>
+          <li><a href="#">Page Statstics</a></li>
+          <li><a href="#">Page Categories</a></li>
+          <li><a href="#">Page Tags</a></li>
+        </ul>
+      </li>
+      <!-- Nav - End Content --> 
+      <!-- Nav - Start Help -->
+      <li class="dashboard"><a class="dashboard" href="#">Dashboard</a></li>
+      <!-- Nav - End Dashboard -->
+    </ul>
+    <!-- End Nav --> 
+    <!-- Start Logo --> 
+    <img id="logo" src="img/logo.png" alt="Admin Theme" /> 
+    <!-- End Logo --> 
+    <br class="cl" />
+  </div>
+  <div class="header-bottom"> 
+    <!-- Start Breadcrumbs -->
+    <ul id="breadcrumbs">
+      <li><a href="#">Base</a> &raquo;</li>
+      <li><a href="#">Level One</a> &raquo;</li>
+      <li><a href="#">Level Two</a></li>
+    </ul>
+    <!-- End Breadcrumbs --> 
+  </div>
+</header>
+
+
+<div id="page">
+
+<aside>
+      <!-- Start Live Search  -->
+      <div class="block">
+      <form class="searchform" action="#">
+        <input id="livesearch" type="text" onBlur="if (this.value == '') {this.value = 'Live Search...';}" onFocus="if (this.value == 'Live Search...') {this.value = '';}" value="Live Search..." class="searchfield" />
+      </form>
+      </div>
+      
+         
+<ul id="sidebar-nav">
+<li><a href="#">Content</a>
+<ul class="drop" style="display: block;">
+  <li><a href="#"><img src="img/icons/16/page.png">Manage Pages</a></li>
+<li><a href="#"><img src="img/icons/16/page_add.png">Add Pages</a></li>
+<li><a href="#"><img src="img/icons/16/page_edit.png">Edit Pages</a></li>
+<li><a href="#"><img src="img/icons/16/page_delete.png">Delete Pages</a></li>
+</ul>
+</li>
+<li><a href="#">Comments</a>
+<ul class="drop">
+  <li><a href="#"><img src="img/icons/16/comments.png">Manage Comments</a></li>
+<li><a href="#"><img src="img/icons/16/comment_add.png">Add Comments</a></li>
+<li><a href="#"><img src="img/icons/16/comment_edit.png">Edit Comments</a></li>
+<li><a href="#"><img src="img/icons/16/comment_delete.png">Delete Comments</a></li>
+</ul>
+</li>
+<li><a href="#">Users</a>
+<ul class="drop">
+  <li><a href="#"><img src="img/icons/16/user.png">Manage Users</a></li>
+<li><a href="#"><img src="img/icons/16/user_add.png">Add Users</a></li>
+<li><a href="#"><img src="img/icons/16/user_edit.png">Edit Users</a></li>
+<li><a href="#"><img src="img/icons/16/user_delete.png">Delete Users</a></li>
+</ul>
+</li>
+<li><a href="#">Gallery</a>
+<ul class="drop">
+<li><a href="#"><img src="img/icons/16/image_manage.png">Manage Images</a></li>
+<li><a href="#"><img src="img/icons/16/image_add.png">Add Images</a></li>
+<li><a href="#"><img src="img/icons/16/image_edit.png">Edit Images</a></li>
+<li><a href="#"><img src="img/icons/16/image_delete.png">Delete Images</a></li>
+</ul>
+</li>
+</ul>
+<br /> <br /> 
+      <div class="block">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+</aside>
+
+
+<div id="page-content" class="container_12"> 
+<a href="#" id="close_sidebar" class="tooltip east" title="Close Sidebar"> Close Sidebar </a>
+<a href="#" id="open_sidebar" class="tooltip east" title="Open Sidebar">Open Sidebar</a>
+
+<div id="page-header">
+        <h1>Dashboard</h1>
+      </div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+ 
+<section class="grid_8">
+        <div class="box-header">
+          Gallery
+          <ul class="tabs">
+      <li><a href="#" class="active">Media</a></li>
+      <li><a href="#">My Album</a></li>
+      <li><a href="#" class="disable">Disabled</a></li>
+    </ul>
+        </div>
+        <div class="box withfooter">
+        <div class="notification info"> There are currently 150 files in this folder. You may load 50 more. </div>
+          <ul class="gallery">
+            <li><a href="img/gallery/01.jpg"><img src="./img/gallery/01-thumb.jpg" alt="" /></a></li>
+            <li><a href="img/gallery/02.jpg"><img src="./img/gallery/02-thumb.jpg" alt="" /></a></li>
+            <li><a href="img/gallery/03.jpg"><img src="./img/gallery/03-thumb.jpg" alt="" /></a></li>
+            <li><a href="img/gallery/04.jpg"><img src="./img/gallery/04-thumb.jpg" alt="" /></a></li>
+            <li><a href="img/gallery/01.jpg"><img src="./img/gallery/01-thumb.jpg" alt="" /></a></li>
+            <li><a href="img/gallery/02.jpg"><img src="./img/gallery/02-thumb.jpg" alt="" /></a></li>
+            <li><a href="img/gallery/03.jpg"><img src="./img/gallery/03-thumb.jpg" alt="" /></a></li>
+            <li><a href="img/gallery/04.jpg"><img src="./img/gallery/04-thumb.jpg" alt="" /></a></li>
+            <li><a href="img/gallery/01.jpg"><img src="./img/gallery/01-thumb.jpg" alt="" /></a></li>
+            <li><a href="img/gallery/02.jpg"><img src="./img/gallery/02-thumb.jpg" alt="" /></a></li>
+            <li><a href="img/gallery/03.jpg"><img src="./img/gallery/03-thumb.jpg" alt="" /></a></li>
+            <li><a href="img/gallery/04.jpg"><img src="./img/gallery/04-thumb.jpg" alt="" /></a></li>
+            <li><a href="img/gallery/01.jpg"><img src="./img/gallery/01-thumb.jpg" alt="" /></a></li>
+            <li><a href="img/gallery/02.jpg"><img src="./img/gallery/02-thumb.jpg" alt="" /></a></li>
+            <li><a href="img/gallery/03.jpg"><img src="./img/gallery/03-thumb.jpg" alt="" /></a></li>
+            <li><a href="img/gallery/04.jpg"><img src="./img/gallery/04-thumb.jpg" alt="" /></a></li>
+          </ul>
+        </div>
+        <div class="box-footer"> <span class="txt-smaller txt-light">Showing 18 images of 150</span>
+          <ul class="pagination">
+            <li><a title="Previous" href="#">&lt; Prev</a></li>
+            <li><a class="current" title="Page 1" href="#">1</a></li>
+            <li><a title="Page 2" href="#">2</a></li>
+            <li><a title="Page 3" href="#">3</a></li>
+            <li><a title="Next" href="#">Next &gt;</a></li>
+          </ul>
+        </div>
+    </section>
+    <section class="grid_4">
+      <div class="border-bottom">
+        <div id="treecontrol" class="fr"> <a class="button grey small" id="tree-open" href="#">Close All</a> <a class="button grey small" id="tree-close" href="#">Open All</a> </div>
+        <h2 class="no-margin">File Explorer</h2>
+      </div>
+      <h3><img src="./img/icons/16/folder.png" alt="" />Media</h3>
+      <ul id="browser" class="filetree">
+        <li class="close"><span class="folder">Gui</span>
+          <ul>
+            <li><img src="./img/icons/16/image.png" alt="" /><a href="#">header-bg.png</a></li>
+            <li><img src="./img/icons/16/image.png" alt="" /><a href="#">company-logo.png</a></li>
+          </ul>
+        </li>
+        <li><span class="folder">Animals</span>
+          <ul>
+            <li><img src="./img/icons/16/image.png" alt="" /><a href="#">Dog.jpg</a></li>
+            <li><img src="./img/icons/16/image.png" alt="" /><a href="#">Giraffe.jpg</a></li>
+            <li><img src="./img/icons/16/image.png" alt="" /><a href="#">Donkey.jpg</a></li>
+            <li><img src="./img/icons/16/image.png" alt="" /><a href="#">Tortoise.jpg</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="border-top tr">
+        <button id="filetree-add" type="button" class="blue small"><img src="./img/icons/button/add-inv.png" alt="save" />New</button>
+      </div>
+    </section>
+    <br class="cl" />
+
+
+
+</div>
+
+<!-- Start Footer -->
+<footer> Copyright ©2010, A <a href="http://iamchrismooney.com">Chris Mooney</a> for <a href="http://themeforest.net?ref=ChrisMooney">Theme Forest</a>. </footer>
+<!-- End Footer -->
+
+<!-- Javascript at the bottom for fast page loading --> 
+<script type="text/javascript" src="http://www.google.com/jsapi"></script> 
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+<script type="text/javascript" src="js/jquery-ui-1.8.1.min.js"></script> 
+<script type="text/javascript" src="js/jquery.tipsy.js"></script> 
+<script type="text/javascript" src="js/jquery.treeview.min.js"></script> 
+<script type="text/javascript" src="js/jquery.cookie.js"></script> 
+<script type="text/javascript" src="js/jquery.lightbox-0.5.min.js"></script> 
+<script type="text/javascript" src="js/jquery.wysiwyg.js"></script> 
+<script type="text/javascript" src="js/functions.js"></script> 
+<!--[if lt IE 7 ]>
+    <script src="js/dd_belatedpng.js"></script>
+  <![endif]--> 
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-587119-24']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

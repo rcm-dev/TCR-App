@@ -1,0 +1,1659 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+
+<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Admin Base - Documentation</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- CSS : implied media="all" -->
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/grid.css" rel="stylesheet" type="text/css" />
+<link href="../css/base.css" rel="stylesheet" type="text/css" />
+<link href="../css/forms.css" rel="stylesheet" type="text/css" />
+<link href="../css/lists.css" rel="stylesheet" type="text/css" />
+<link href="../css/gallery.css" rel="stylesheet" type="text/css" />
+<link href="../css/calendar.css" rel="stylesheet" type="text/css" />
+<link href="../css/extensions.css" rel="stylesheet" type="text/css" />
+
+<!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+<script src="../js/modernizr-1.5.min.js"></script>
+<link href="syntaxhighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
+<script src="syntaxhighlighter/scripts/shCore.js"></script>
+<script src="syntaxhighlighter/scripts/shBrushJScript.js"></script>
+<script src="syntaxhighlighter/scripts/shBrushXml.js"></script>
+<link href="syntaxhighlighter/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+     SyntaxHighlighter.all()
+</script>
+</head>
+
+<body class="sidebar-left docs">
+
+<!-- header -->
+<div class="header-middle">
+<h1>Admin Base - Documentation</h1>
+</div>
+<!-- header end -->
+<div id="page">
+  <aside>
+    <div class="border-bottom margin-bottom margin-top">
+      <h2>Contents</h2>
+    </div>
+    <br />
+    <ul class="filetree">
+      <li><a href="index.html"><img src="../img/icons/16/information.png">About</a></li>
+      <li><a href="files.html"><img src="../img/icons/16/page_white_stack.png">Files</a></li>
+      <li class="closed"><span class="folder">Template Structure</span>
+        <ul>
+          <li><a href="template.html#html">HTML5</a></li>
+          <li><a href="template.html#grid">Fluid Grid</a></li>
+          <li><a href="template.html#fonts">Fonts</a></li>
+          <li><a href="template.html#special">Special Pages</a></li>
+        </ul>
+      </li>
+      <li><span class="folder">CSS Elements</span>
+        <ul>
+          <li><a href="css.html#generic">Generic Classes</a></li>
+          <li><a href="css.html#blocks">Content Blocks</a></li>
+          <li><a href="css.html#calendar">Calendar</a></li>
+          <li><a href="css.html#list">Lists</a></li>
+          <li><a href="css.html#form">Forms</a></li>
+          <li><a href="css.html#gallery">Gallery</a></li>
+        </ul>
+      </li>
+      <li class="closed"><span class="folder">Functions</span>
+        <ul>
+          <li><a href="functions.html#sidebar">Sidebar</a></li>
+          <li><a href="functions.html#tooltips">Toolips</a></li>
+          <li><a href="functions.html#tabs">Tabs</a></li>
+          <li><a href="functions.html#charts">Charts</a></li>
+        </ul>
+      </li>
+      <li><a href="credits.html"><img src="../img/icons/16/asterisk_yellow.png">Credits</a></li>
+    </ul>
+  </aside>
+  <div id="page-content" class="container_12"> <a href="#" id="open_sidebar">Open Sidebar</a>
+  
+  <div id="page-header">
+      <h2>Documentation - CSS Elements</h2>
+    </div>
+    <section class="grid_12">
+      <h3><a id="generic">Generic</a></h3>
+      <p>This template has several built in classes for easy formatting.</p>
+      <section class="grid_6">
+        <dl class="definition">
+          <dt>.cl</dt>
+          <dd>A clearing class to clear floats without taking up vertical space</dd>
+          <dt>.fl</dt>
+          <dd>float something left</dd>
+          <dt>.fr</dt>
+          <dd>float something right</dd>
+          <dt>.fn</dt>
+          <dd>specifically don't float something</dd>
+          <dt>.tl</dt>
+          <dd>align text left</dd>
+          <dt>.tr</dt>
+          <dd>align text right</dd>
+          <dt>.tc</dt>
+          <dd>align text center</dd>
+          <dt>.hd </dt>
+          <dd>hide an object</dd>
+          <dt>.strong</dt>
+          <dd>bold text</dd>
+        </dl>
+      </section>
+      <section class="grid_6">
+        <dl class="definition">
+          <dt>.margin-left, .margin-right, .margin-top, .margin-down</dt>
+          <dd>add a 20px margin</dd>
+          <dt>.border-left, . border-right, . border-top, . border-down</dt>
+          <dd>add a border with a 10px margin</dd>
+          <dt>.txt-small</dt>
+          <dd>font size to 85%</dd>
+          <dt>.txt-smaller</dt>
+          <dd>font size to 73%</dd>
+          <dt>.txt-light</dt>
+          <dd>font lighter</dd>
+          <dt>.txt-lighter</dt>
+          <dd>font even lighter</dd>
+        </dl>
+      </section>
+      <br class="cl" />
+      <br />
+      <br />
+      <h3><a id="blocks">Content Blocks</a></h3>
+      <p>The template provides a simple markup to easily create blocks around your content. Blocks can have a header and footer, one or the other, or neither.</p>
+      <h3>Basic Block</h3>
+      <section class="grid_6"> 
+        <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+  <div class="box-header">
+   Box Header
+  </div>
+  <div class="box">
+    <p>Box Content</p>
+  </div>
+  <div class="box-footer"> Box Footer </div>
+
+]]></script> 
+      </section>
+      <section class="grid_6">
+          <div class="box-header">
+           Box Header
+          </div>
+          <div class="box withfooter">
+            <p>Box Content</p>
+          </div>
+          <div class="box-footer"> Box Footer </div>
+      </section>
+      <br class="cl" />
+      <br />
+      <h3>Block With Navigation</h3>
+      <p>This block can be configured to show different content depending on the navigation selection. Please see the section on "tabs" in the functions part of this document. The icons used are scaled down versions from the Fresh-Farm icon set.</p>
+      <section class="grid_6"> 
+        <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+
+          <div class="box-header">
+            Box Header
+            <ul class="controls">
+              <li><a href="#" class="tooltip" title="Pages"><img height="24" width="24" src="./img/icons/24/page.png"></a></li>
+              <li><a href="#" class="tooltip active" title="Users"><img height="24" width="24" src="./img/icons/24/user.png"></a></li>
+              <li><a href="#" class="tooltip" title="Comments"><img height="24" width="24" src="./img/icons/24/comments.png"></a></li>
+              <li><a href="#" class="tooltip" title="Hello"><img height="24" width="24" src="./img/icons/24/add.png"></a></li>
+            </ul>
+          </div>
+          <div class="box">
+            <p>Box Content</p>
+          </div>
+          <div class="box-footer">Box Footer
+            <ul class="controls">
+              <li><a href="#" class="tooltip" title="Pages"><img height="24" width="24" src="./img/icons/24/page.png"></a></li>
+              <li><a href="#" class="tooltip active" title="Users"><img height="24" width="24" src="./img/icons/24/user.png"></a></li>
+              <li><a href="#" class="tooltip" title="Comments"><img height="24" width="24" src="./img/icons/24/comments.png"></a></li>
+              <li><a href="#" class="tooltip" title="Hello"><img height="24" width="24" src="./img/icons/24/add.png"></a></li>
+            </ul>
+          </div>
+
+]]></script> 
+      </section>
+      <section class="grid_6">
+          <div class="box-header">
+            Box Header
+            <ul class="controls">
+              <li><a href="#" class="tooltip" title="Pages"><img src="./img/icons/16/page.png"></a></li>
+              <li><a href="#" class="tooltip active" title="Users"><img src="./img/icons/16/user.png"></a></li>
+              <li><a href="#" class="tooltip" title="Comments"><img src="./img/icons/16/comments.png"></a></li>
+              <li><a href="#" class="tooltip" title="Hello"><img src="./img/icons/16/add.png"></a></li>
+            </ul>
+          </div>
+          <div class="box withfooter">
+            <p>Box Content</p>
+          </div>
+          <div class="box-footer">Box Footer
+            <ul class="controls">
+              <li><a href="#" class="tooltip" title="Pages"><img src="./img/icons/16/page.png"></a></li>
+              <li><a href="#" class="tooltip active" title="Users"><img src="./img/icons/16/user.png"></a></li>
+              <li><a href="#" class="tooltip" title="Comments"><img src="./img/icons/16/comments.png"></a></li>
+              <li><a href="#" class="tooltip" title="Hello"><img src="./img/icons/16/add.png"></a></li>
+            </ul>
+          </div>
+      </section>
+      <br class="cl" />
+      <br />
+      <h3>Block With Tabs</h3>
+      <section class="grid_6"> 
+        <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+  <div class="box-header">
+   Box Header
+    <ul class="tabs">
+      <li><a href="#" class="active">Tab 1</a></li>
+      <li><a href="#">Tab 2</a></li>
+      <li><a href="#">Tab 3</a></li>
+      <li><a href="#" class="disable">Disabled</a></li>
+      <li><a href="#" class="img tooltip north" title="Add Tab"><img alt="" src="./img/icons/16/add.png"></a></li>
+    </ul>
+  </div>
+  <div class="notification tip no-margin" style="display: block; opacity: 0;"> <span class="strong">TIP:</span> This is a tip message. <span title="Dismiss" class="close"></span><span title="Dismiss" class="close"></span></div>
+  <div class="box">
+    <p>Box Content</p>
+  </div>
+  <div class="box-footer"> Box Footer
+    <ul class="tabs">
+      <li><a href="#" class="active">Tab 1</a></li>
+      <li><a href="#">Tab 2</a></li>
+      <li><a href="#" class="disable">Disabled</a></li>
+      <li><a href="#" class="img tooltip" title="Add Tab"><img alt="" src="./img/icons/16/add.png"></a></li>
+    </ul>
+</div>
+
+
+]]></script> 
+      </section>
+      <section class="grid_6">
+          <div class="box-header">
+            Box Header
+            <ul class="tabs">
+              <li><a href="#" class="active">Tab 1</a></li>
+              <li><a href="#">Tab 2</a></li>
+              <li><a href="#">Tab 3</a></li>
+              <li><a href="#" class="disable">Disabled</a></li>
+              <li><a href="#" class="img tooltip north" title="Add Tab"><img alt="" src="./img/icons/16/add.png"></a></li>
+            </ul>
+          </div>
+          <div class="box withfooter">
+            <p>Box Content</p>
+          </div>
+          <div class="box-footer"> Box Footer
+            <ul class="tabs">
+              <li><a href="#" class="active">Tab 1</a></li>
+              <li><a href="#">Tab 2</a></li>
+              <li><a href="#" class="disable">Disabled</a></li>
+              <li><a href="#" class="img tooltip" title="Add Tab"><img alt="" src="./img/icons/16/add.png"></a></li>
+            </ul>
+          </div>
+      </section>
+      <br class="cl" />
+      <br />
+      <h3>Block With Mini-Tabs</h3>
+      <section class="grid_6"> 
+        <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+
+        <div class="box-header">
+         Box Header
+          <ul class="tabs mini">
+            <li><a href="#" class="tooltip" title="Pages"><img height="16" width="16" src="./img/icons/16/page_white.png"></a></li>
+            <li><a href="#" title="Groups" class="tooltip active"><img height="16" width="16" src="./img/icons/16/group.png"></a></li>
+            <li><a href="#" title="Comments" class="tooltip"><img height="16" width="16" src="./img/icons/16/comments.png"></a></li>
+            <li><a href="#" title="Images" class="tooltip"><img height="16" width="16" src="./img/icons/16/images.png"></a></li>
+            <li><a href="#" title="Settings" class="tooltip"><img height="16" width="16" src="./img/icons/16/cog.png"></a></li>
+          </ul>
+        </div>
+        <div class="box"> Box Content</div>
+        <div class="box-footer"> Box Footer
+          <ul class="tabs mini">
+            <li><a href="#" class="tooltip" title="Pages"><img height="16" width="16" src="./img/icons/16/page_white.png"></a></li>
+            <li><a href="#" title="Groups" class="tooltip active"><img height="16" width="16" src="./img/icons/16/group.png"></a></li>
+            <li><a href="#" title="Comments" class="tooltip"><img height="16" width="16" src="./img/icons/16/comments.png"></a></li>
+            <li><a href="#" title="Images" class="tooltip"><img height="16" width="16" src="./img/icons/16/images.png"></a></li>
+            <li><a href="#" title="Settings" class="tooltip"><img height="16" width="16" src="./img/icons/16/cog.png"></a></li>
+          </ul>
+        </div>
+
+]]></script> 
+      </section>
+      <section class="grid_6">
+          <div class="box-header">
+            Box Header
+            <ul class="tabs mini">
+              <li><a href="#" class="tooltip" title="Pages"><img height="16" width="16" src="./img/icons/16/page_white.png"></a></li>
+              <li><a href="#" title="Groups" class="tooltip active"><img height="16" width="16" src="./img/icons/16/group.png"></a></li>
+              <li><a href="#" title="Comments" class="tooltip"><img height="16" width="16" src="./img/icons/16/comments.png"></a></li>
+              <li><a href="#" title="Images" class="tooltip"><img height="16" width="16" src="./img/icons/16/images.png"></a></li>
+              <li><a href="#" title="Settings" class="tooltip"><img height="16" width="16" src="./img/icons/16/cog.png"></a></li>
+            </ul>
+          </div>
+          <div class="box withfooter"> Box Content</div>
+          <div class="box-footer"> Box Footer
+            <ul class="tabs mini">
+              <li><a href="#" class="tooltip" title="Pages"><img height="16" width="16" src="./img/icons/16/page_white.png"></a></li>
+              <li><a href="#" title="Groups" class="tooltip active"><img height="16" width="16" src="./img/icons/16/group.png"></a></li>
+              <li><a href="#" title="Comments" class="tooltip"><img height="16" width="16" src="./img/icons/16/comments.png"></a></li>
+              <li><a href="#" title="Images" class="tooltip"><img height="16" width="16" src="./img/icons/16/images.png"></a></li>
+              <li><a href="#" title="Settings" class="tooltip"><img height="16" width="16" src="./img/icons/16/cog.png"></a></li>
+            </ul>
+          </div>
+      </section>
+      <br class="cl" />
+      <br />
+      <h3>Block With Pagination</h3>
+      <section class="grid_6"> 
+        <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+
+        <div class="box-header">
+          Box Header
+          <ul class="pagination">
+            <li><a title="Previous" href="#">&lt; Prev</a></li>
+            <li><a class="current" title="Page 1" href="#">1</a></li>
+            <li><a title="Page 2" href="#">2</a></li>
+            <li><a title="Page 3" href="#">3</a></li>
+            <li><a title="Next" href="#">Next &gt;</a></li>
+          </ul>
+        </div>
+        <div class="box">
+          <p>Box Content</p>
+        </div>
+        <div class="box-footer"> Box Footer
+          <ul class="pagination">
+            <li><a title="Previous" href="#">&lt; Prev</a></li>
+            <li><a class="current" title="Page 1" href="#">1</a></li>
+            <li><a title="Page 2" href="#">2</a></li>
+            <li><a title="Page 3" href="#">3</a></li>
+            <li><a title="Next" href="#">Next &gt;</a></li>
+          </ul>
+        </div>
+
+]]></script> 
+      </section>
+      <section class="grid_6">
+          <div class="box-header">
+            Box Header
+            <ul class="pagination">
+              <li><a title="Previous" href="#">&lt; Prev</a></li>
+              <li><a class="current" title="Page 1" href="#">1</a></li>
+              <li><a title="Page 2" href="#">2</a></li>
+              <li><a title="Page 3" href="#">3</a></li>
+              <li><a title="Next" href="#">Next &gt;</a></li>
+            </ul>
+          </div>
+          <div class="box withfooter">
+            <p>Box Content</p>
+          </div>
+          <div class="box-footer"> Box Footer
+            <ul class="pagination">
+              <li><a title="Previous" href="#">&lt; Prev</a></li>
+              <li><a class="current" title="Page 1" href="#">1</a></li>
+              <li><a title="Page 2" href="#">2</a></li>
+              <li><a title="Page 3" href="#">3</a></li>
+              <li><a title="Next" href="#">Next &gt;</a></li>
+            </ul>
+        </div>
+      </section>
+      <br class="cl" />
+      <br />
+      <h3><a id="calendar">Calendar</a></h3>
+      <p>Admin Base includes three different calendar styles. Mini, Medium and Full. They all use a common table structure.</p>
+      <h4>Mini Calendar</h4>
+      <p>The Mini Calendar is 200px in width. It can be position left or right using the built in float classes. (.fl and .fr)</p>
+      <section class="grid_6"> 
+        <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+<div class="mini-calendar">
+          <div class="calendar-controls"> <a title="Previous month" class="calendar-prev" href="#"><img height="16" width="16" src="./img/icons/button/arrow-left-inv.png"></a> <a title="Next month" class="calendar-next" href="#"><img height="16" width="16" src="./img/icons/button/arrow-right-inv.png"></a> Sept 2010 </div>
+          <table cellspacing="0">
+            <thead>
+              <tr>
+                <th scope="col">M</th>
+                <th scope="col">T</th>
+                <th scope="col">W</th>
+                <th scope="col">T</th>
+                <th scope="col">F</th>
+                <th scope="col">S</th>
+                <th scope="col">S</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+              <!-- Days outside the current month are greyed -->
+                <td class="other-month">30</td>
+                <td class="other-month">31</td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">2</a></td>
+                <td><a href="#">3</a></td>
+                <td><a href="#">4</a></td>
+                <td class="last"><a href="#">5</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">6</a></td>
+                <td><a href="#">7</a></td>
+                <td><a href="#">8</a></td>
+                <td><a href="#">9</a></td>
+                <td class="last"><a href="#">10</a></td>
+                <td class="last"><a href="#">11</a></td>
+                <td class="last"><a href="#">12</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">13</a></td>
+                <!-- The current day -->
+                <td class="today"><a href="#">14</a></td>
+                <td><a href="#">15</a></td>
+                <td><a href="#">16</a></td>
+                <td><a href="#">17</a></td>
+                <td><a href="#">18</a></td>
+                <td class="last"><a href="#">19</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">20</a></td>
+                <td><a href="#">21</a></td>
+                <td><a href="#">22</a></td>
+                <td><a href="#">23</a></td>
+                <td><a href="#">24</a></td>
+                <td><a href="#">25</a></td>
+                <td class="last"><a href="#">26</a></td>
+              </tr>
+              <tr class="last">
+                <td><a href="#">27</a></td>
+                <td><a href="#">28</a></td>
+                <td><a href="#">29</a></td>
+                <td><a href="#">30</a></td>
+                <td class="other-month">1</td>
+                <td class="other-month">2</td>
+                <td class="other-month last">3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+]]></script> 
+      </section>
+      <section class="grid_6">
+        <div class="mini-calendar fr">
+          <div class="calendar-controls"> <a title="Previous month" class="calendar-prev" href="#"><img height="16" width="16" src="./img/icons/button/arrow-left-inv.png"></a> <a title="Next month" class="calendar-next" href="#"><img height="16" width="16" src="./img/icons/button/arrow-right-inv.png"></a> Sept 2010 </div>
+          <table cellspacing="0">
+            <thead>
+              <tr>
+                <th scope="col">M</th>
+                <th scope="col">T</th>
+                <th scope="col">W</th>
+                <th scope="col">T</th>
+                <th scope="col">F</th>
+                <th scope="col">S</th>
+                <th scope="col">S</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr> 
+                <!-- Days outside the current month are greyed -->
+                <td class="other-month">30</td>
+                <td class="other-month">31</td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">2</a></td>
+                <td><a href="#">3</a></td>
+                <td><a href="#">4</a></td>
+                <td class="last"><a href="#">5</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">6</a></td>
+                <td><a href="#">7</a></td>
+                <td><a href="#">8</a></td>
+                <td><a href="#">9</a></td>
+                <td class="last"><a href="#">10</a></td>
+                <td class="last"><a href="#">11</a></td>
+                <td class="last"><a href="#">12</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">13</a></td>
+                <!-- The current day -->
+                <td class="today"><a href="#">14</a></td>
+                <td><a href="#">15</a></td>
+                <td><a href="#">16</a></td>
+                <td><a href="#">17</a></td>
+                <td><a href="#">18</a></td>
+                <td class="last"><a href="#">19</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">20</a></td>
+                <td><a href="#">21</a></td>
+                <td><a href="#">22</a></td>
+                <td><a href="#">23</a></td>
+                <td><a href="#">24</a></td>
+                <td><a href="#">25</a></td>
+                <td class="last"><a href="#">26</a></td>
+              </tr>
+              <tr class="last">
+                <td><a href="#">27</a></td>
+                <td><a href="#">28</a></td>
+                <td><a href="#">29</a></td>
+                <td><a href="#">30</a></td>
+                <td class="other-month">1</td>
+                <td class="other-month">2</td>
+                <td class="other-month last">3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <br class="cl" />
+      <br />
+      <h4>Medium Calendar</h4>
+      <p>The Medium Calendar is 400px wide by default although it is flexible enough to be resized.</p>
+      <section class="grid_6"> 
+        <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+		
+        <div class="medium-calendar">
+          <div class="calendar-controls"> <a title="Previous month" class="calendar-prev" href="#"><img height="16" width="16" src="./img/icons/button/arrow-left-inv.png"></a> <a title="Next month" class="calendar-next" href="#"><img height="16" width="16" src="./img/icons/button/arrow-right-inv.png"></a> Sept 2010 </div>
+          <table cellspacing="0">
+            <thead>
+              <tr>
+                <th scope="col">Mon</th>
+                <th scope="col">Tue</th>
+                <th scope="col">Wed</th>
+                <th scope="col">Thu</th>
+                <th scope="col">Fri</th>
+                <th scope="col">Sat</th>
+                <th scope="col" class="last">Sun</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+              <!-- Days outside the current month are greyed -->
+                <td class="other-month">30</td>
+                <td class="other-month">31</td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">2</a></td>
+                <td><a href="#">3</a></td>
+                <td><a href="#">4</a></td>
+                <!-- Event notifications can be added with 4 different colours. Default (grey), blue, red and green -->
+                <td class="last"><a href="#">5<span class="events">1</span></a></td>
+              </tr>
+              <tr class="alt">
+                <td><a href="#">6</a></td>
+                <td><a href="#">7<span class="events">3</span></a></td>
+                <td><a href="#">8</a></td>
+                <td><a href="#">9</a></td>
+                <td><a href="#">10<span class="events red">1</span></a></td>
+                <td><a href="#">11</a></td>
+                <td class="last"><a href="#">12</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">13</a></td>
+                <!-- The current day -->
+                <td class="today"><a href="#">14</a></td>
+                <td><a href="#">15</a></td>
+                <td><a href="#">16<span class="events">2</span></a></td>
+                <td><a href="#">17</a></td>
+                <td><a href="#">18</a></td>
+                <td class="last"><a href="#">19</a></td>
+              </tr>
+              <tr class="alt">
+                <td><a href="#">20</a></td>
+                <td><a href="#">21</a></td>
+                <td><a href="#">22<span class="events">1</span></a></td>
+                <td><a href="#">23</a></td>
+                <td><a href="#">24</a></td>
+                <td><a href="#">25</a></td>
+                <td class="last"><a href="#">26</a></td>
+              </tr>
+              <tr class="last">
+                <td><a href="#">27</a></td>
+                <td><a href="#">28</a></td>
+                <td><a href="#">29</a></td>
+                <td><a href="#">30</a></td>
+                <td class="other-month">1</td>
+                <td class="other-month">2</td>
+                <td class="other-month last">3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+]]></script> 
+      </section>
+      <section class="grid_6">
+        <div class="medium-calendar fr">
+          <div class="calendar-controls"> <a title="Previous month" class="calendar-prev" href="#"><img height="16" width="16" src="./img/icons/button/arrow-left-inv.png"></a> <a title="Next month" class="calendar-next" href="#"><img height="16" width="16" src="./img/icons/button/arrow-right-inv.png"></a> Sept 2010 </div>
+          <table cellspacing="0">
+            <thead>
+              <tr>
+                <th scope="col">Mon</th>
+                <th scope="col">Tue</th>
+                <th scope="col">Wed</th>
+                <th scope="col">Thu</th>
+                <th scope="col">Fri</th>
+                <th scope="col">Sat</th>
+                <th scope="col" class="last">Sun</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr> 
+                <!-- Days outside the current month are greyed -->
+                <td class="other-month">30</td>
+                <td class="other-month">31</td>
+                <td><a href="#">1</a></td>
+                <td><a href="#">2</a></td>
+                <td><a href="#">3</a></td>
+                <td><a href="#">4</a></td>
+                <!-- Event notifications can be added with 4 different colours. Default (grey), blue, red and green -->
+                <td class="last"><a href="#">5<span class="events">1</span></a></td>
+              </tr>
+              <tr class="alt">
+                <td><a href="#">6</a></td>
+                <td><a href="#">7<span class="events">3</span></a></td>
+                <td><a href="#">8</a></td>
+                <td><a href="#">9</a></td>
+                <td><a href="#">10<span class="events red">1</span></a></td>
+                <td><a href="#">11</a></td>
+                <td class="last"><a href="#">12</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">13</a></td>
+                <!-- The current day -->
+                <td class="today"><a href="#">14</a></td>
+                <td><a href="#">15</a></td>
+                <td><a href="#">16<span class="events">2</span></a></td>
+                <td><a href="#">17</a></td>
+                <td><a href="#">18</a></td>
+                <td class="last"><a href="#">19</a></td>
+              </tr>
+              <tr class="alt">
+                <td><a href="#">20</a></td>
+                <td><a href="#">21</a></td>
+                <td><a href="#">22<span class="events">1</span></a></td>
+                <td><a href="#">23</a></td>
+                <td><a href="#">24</a></td>
+                <td><a href="#">25</a></td>
+                <td class="last"><a href="#">26</a></td>
+              </tr>
+              <tr class="last">
+                <td><a href="#">27</a></td>
+                <td><a href="#">28</a></td>
+                <td><a href="#">29</a></td>
+                <td><a href="#">30</a></td>
+                <td class="other-month">1</td>
+                <td class="other-month">2</td>
+                <td class="other-month last">3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <br class="cl" />
+      <br />
+      <h4>Full Calendar</h4>
+      <p>The Fulll Calendar is fluid. As with the medium calendar you can add event notifications but with more detail.</p>
+      <section class="grid_12"> 
+        <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+        <table cellspacing="0" class="calendar">
+          <thead>
+            <tr>
+              <th scope="col">Monday</th>
+              <th scope="col">Tuesday</th>
+              <th scope="col">Wednesday</th>
+              <th scope="col">Thursday</th>
+              <th scope="col">Friday</th>
+              <th scope="col">Saturday</th>
+              <th scope="col">Sunday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+            <!-- Days outside the current month are greyed -->
+              <td class="other-month"><span>30</span></td>
+              <td class="other-month"><span>31</span></td>
+              <td><a href="#">1</a></td>
+              <td><a href="#">2</a>
+              <!-- More informative event notifications can be added -->
+                <ul class="events">
+                  <li>
+                    <time>08:00</time>
+                    Normal</li>
+                  <li>
+                    <time class="red">10:00</time>
+                    Important</li>
+                  <li>
+                    <time class="green">01:00</time>
+                    Done</li>
+                </ul></td>
+              <td><a href="#">3</a></td>
+              <td><a href="#">4</a></td>
+              <td class="last"><a href="#">5</a></td>
+            </tr>
+            <tr class="alt">
+              <td><a href="#">6</a></td>
+              <td><a href="#">7</a></td>
+              <td><a href="#">8</a></td>
+              <td><a href="#">9</a></td>
+              <td><a href="#">10</a></td>
+              <td><a href="#">11</a></td>
+              <td class="last"><a href="#">12</a>
+                <ul class="events">
+                  <li>
+                    <time>13:00</time>
+                    Lunch with James</li>
+                </ul></td>
+            </tr>
+            <tr>
+              <td><a href="#">13</a></td>
+              <!--The current day -->
+              <td class="today"><a href="#">14</a></td>
+              <td><a href="#">15</a></td>
+              <td><a href="#">16</a>
+                <ul class="events">
+                  <li>
+                    <time>10:00</time>
+                    Meeting with Sarah</li>
+                </ul></td>
+              <td><a href="#">17</a></td>
+              <td><a href="#">18</a></td>
+              <td class="last"><a href="#">19</a></td>
+            </tr>
+            <tr class="alt">
+              <td><a href="#">20</a></td>
+              <td><a href="#">21</a>
+                <ul class="events">
+                <li>Reminder!</li>
+                </ul> </td>
+              <td><a href="#">22</a></td>
+              <td><a href="#">23</a></td>
+              <td><a href="#">24</a></td>
+              <td><a href="#">25</a></td>
+              <td class="last"><a href="#">26</a></td>
+            </tr>
+            <tr class="last">
+              <td><a href="#">27</a></td>
+              <td><a href="#">28</a></td>
+              <td><a href="#">29</a></td>
+              <td><a href="#">30</a></td>
+              <td class="other-month">1</td>
+              <td class="other-month">2</td>
+              <td class="other-month last">3</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+]]></script> 
+      </section>
+      <section class="grid_12">
+        <table cellspacing="0" class="calendar">
+          <thead>
+            <tr>
+              <th scope="col">Monday</th>
+              <th scope="col">Tuesday</th>
+              <th scope="col">Wednesday</th>
+              <th scope="col">Thursday</th>
+              <th scope="col">Friday</th>
+              <th scope="col">Saturday</th>
+              <th scope="col">Sunday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr> 
+              <!-- Days outside the current month are greyed -->
+              <td class="other-month"><span>30</span></td>
+              <td class="other-month"><span>31</span></td>
+              <td><a href="#">1</a></td>
+              <td><a href="#">2</a> 
+                <!-- More informative event notifications can be added -->
+                
+                <ul class="events">
+                  <li>
+                    <time>08:00</time>
+                    Normal</li>
+                  <li>
+                    <time class="red">10:00</time>
+                    Important</li>
+                  <li>
+                    <time class="green">01:00</time>
+                    Done</li>
+                </ul></td>
+              <td><a href="#">3</a></td>
+              <td><a href="#">4</a></td>
+              <td class="last"><a href="#">5</a></td>
+            </tr>
+            <tr class="alt">
+              <td><a href="#">6</a></td>
+              <td><a href="#">7</a></td>
+              <td><a href="#">8</a></td>
+              <td><a href="#">9</a></td>
+              <td><a href="#">10</a></td>
+              <td><a href="#">11</a></td>
+              <td class="last"><a href="#">12</a>
+                <ul class="events">
+                  <li>
+                    <time>13:00</time>
+                    Lunch with James</li>
+                </ul></td>
+            </tr>
+            <tr>
+              <td><a href="#">13</a></td>
+              <!--The current day -->
+              <td class="today"><a href="#">14</a></td>
+              <td><a href="#">15</a></td>
+              <td><a href="#">16</a>
+                <ul class="events">
+                  <li>
+                    <time>10:00</time>
+                    Meeting with Sarah</li>
+                </ul></td>
+              <td><a href="#">17</a></td>
+              <td><a href="#">18</a></td>
+              <td class="last"><a href="#">19</a></td>
+            </tr>
+            <tr class="alt">
+              <td><a href="#">20</a></td>
+              <td><a href="#">21</a>
+                <ul class="events">
+                  <li>Reminder!</li>
+                </ul></td>
+              <td><a href="#">22</a></td>
+              <td><a href="#">23</a></td>
+              <td><a href="#">24</a></td>
+              <td><a href="#">25</a></td>
+              <td class="last"><a href="#">26</a></td>
+            </tr>
+            <tr class="last">
+              <td><a href="#">27</a></td>
+              <td><a href="#">28</a></td>
+              <td><a href="#">29</a></td>
+              <td><a href="#">30</a></td>
+              <td class="other-month">1</td>
+              <td class="other-month">2</td>
+              <td class="other-month last">3</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <br class="cl" />
+      <br />
+      <h3><a id="list">Lists</a></h3>
+      <h3>Bulleted List</h3>
+      <section class="grid_7"> 
+        <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+<!-- Default List -->
+<h4>Default</h4>
+<ul class="bullet-list">
+    <li>Lorem ipsum  amet</li>
+    <li>Dolor sit </li>
+    <li>Sit amet</li>
+</ul>
+<!-- With Grey Background -->
+<ul class="bullet-list grey">
+    <li>Lorem ipsum  amet</li>
+    <li>Dolor sit </li>
+    <li>Sit amet</li>
+</ul>
+<!-- With Link -->
+        <ul class="bullet-list grey">
+          <li><a href="#">Lorem ipsum  amet</a></li>
+          <li><a href="#">Dolor sit</a></li>
+          <li><a href="#">Sit amet</a></li>
+        </ul>
+
+]]></script> 
+      </section>
+      <section class="grid_5">
+        <h4>Default</h4>
+        <ul class="bullet-list">
+          <li>Lorem ipsum  amet</li>
+          <li>Dolor sit </li>
+          <li>Sit amet</li>
+        </ul>
+        <h4>With Grey Background</h4>
+        <ul class="bullet-list grey">
+          <li>Lorem ipsum  amet</li>
+          <li>Dolor sit </li>
+          <li>Sit amet</li>
+        </ul>
+        <h4>With Link </h4>
+        <ul class="bullet-list grey">
+          <li><a href="#">Lorem ipsum  amet</a></li>
+          <li><a href="#">Dolor sit</a></li>
+          <li><a href="#">Sit amet</a></li>
+        </ul>
+      </section>
+      <br class="cl" />
+      <br />
+      <h4>Image List</h4>
+      <section class="grid_7"> 
+        <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+
+<!-- Default -->
+<ul class="imglist">
+    <li><img alt="" src="./img/icons/16/page_white_flash.png">Item 1</li>
+    <li><img alt="" src="./img/icons/16/folder.png">Item 2</li>
+    <li><img alt="" src="./img/icons/16/folder.png">Item 3</li>
+    </ul>
+	<!-- With Grey Background -->
+    <ul class="imglist grey">
+    <li><img alt="" src="./img/icons/16/page_white_flash.png">Item 1</li>
+    <li><img alt="" src="./img/icons/16/folder.png">Item 2</li>
+    <li><img alt="" src="./img/icons/16/folder.png">Item 3</li>
+    </ul>
+	<!-- With Link -->
+        <ul class="imglist grey">
+    <li><a href="#"><img alt="" src="./img/icons/16/page_white_flash.png">Item 1</a></li>
+    <li><a href="#"><img alt="" src="./img/icons/16/folder.png">Item 2</a></li>
+    <li><a href="#"><img alt="" src="./img/icons/16/folder.png">Item 3</a></li>
+    </ul>
+	
+]]></script> 
+      </section>
+      <section class="grid_5">
+        <h4>Default</h4>
+        <ul class="imglist">
+          <li><img alt="" src="./img/icons/16/page_white_flash.png">Item 1</li>
+          <li><img alt="" src="./img/icons/16/folder.png">Item 2</li>
+          <li><img alt="" src="./img/icons/16/folder.png">Item 3</li>
+        </ul>
+        <h4>With Grey Background</h4>
+        <ul class="imglist grey">
+          <li><img alt="" src="./img/icons/16/page_white_flash.png">Item 1</li>
+          <li><img alt="" src="./img/icons/16/folder.png">Item 2</li>
+          <li><img alt="" src="./img/icons/16/folder.png">Item 3</li>
+        </ul>
+        <h4>With Link</h4>
+        <ul class="imglist grey">
+          <li><a href="#"><img alt="" src="./img/icons/16/page_white_flash.png">Item 1</a></li>
+          <li><a href="#"><img alt="" src="./img/icons/16/folder.png">Item 2</a></li>
+          <li><a href="#"><img alt="" src="./img/icons/16/folder.png">Item 3</a></li>
+        </ul>
+      </section>
+      <br class="cl" />
+      <br />
+      <h4>Collapsible List</h4>
+      <section class="grid_7"> 
+        <script type="syntaxhighlighter" class="brush: xml"><![CDATA[	
+	
+<!-- Default Collapsible List -->
+<ul class="collapsible-list">
+    <li class="collapsed"><span class="toggle"></span><img alt="" src="./img/icons/16/folder.png">Item 2
+    <ul>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+    </ul>
+    </li>
+    <li class="collapsed"><span class="toggle"></span><img alt="" src="./img/icons/16/folder.png">Item 2
+        <ul>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+    </ul>
+    </li>
+    <li><img alt="" src="./img/icons/16/folder.png">Item 3</li>
+    </ul>
+<!-- Collapsible List Grey -->    
+    <ul class="collapsible-list grey">
+    <li class="collapsed"><span class="toggle"></span><img alt="" src="./img/icons/16/folder.png">Item 2
+    <ul>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+    </ul>
+    </li>
+    <li class="collapsed"><span class="toggle"></span><img alt="" src="./img/icons/16/folder.png">Item 2
+        <ul>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+    </ul>
+    </li>
+    <li><img alt="" src="./img/icons/16/folder.png">Item 3</li>
+    </ul>
+
+]]></script> 
+      </section>
+      <section class="grid_5">
+        <ul class="collapsible-list">
+          <li class="collapsed"><span class="toggle"></span><img alt="" src="./img/icons/16/folder.png">Item 2
+            <ul>
+              <li>One</li>
+              <li>Two</li>
+              <li>Three</li>
+            </ul>
+          </li>
+          <li class="collapsed"><span class="toggle"></span><img alt="" src="./img/icons/16/folder.png">Item 2
+            <ul>
+              <li>One</li>
+              <li>Two</li>
+              <li>Three</li>
+            </ul>
+          </li>
+          <li><img alt="" src="./img/icons/16/folder.png">Item 3</li>
+        </ul>
+        <ul class="collapsible-list grey">
+          <li class="collapsed"><span class="toggle"></span><img alt="" src="./img/icons/16/folder.png">Item 2
+            <ul>
+              <li>One</li>
+              <li>Two</li>
+              <li>Three</li>
+            </ul>
+          </li>
+          <li class="collapsed"><span class="toggle"></span><img alt="" src="./img/icons/16/folder.png">Item 2
+            <ul>
+              <li>One</li>
+              <li>Two</li>
+              <li>Three</li>
+            </ul>
+          </li>
+          <li><img alt="" src="./img/icons/16/folder.png">Item 3</li>
+        </ul>
+      </section>
+      <br class="cl" />
+      <br />
+      <h4>Tags</h4>
+      <p></p>
+      <section class="grid_7"> 
+        <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+		<!-- Default Tags -->
+<ul class="tags">
+    <li><a href="#">Pizza</a></li>
+    <li><a href="#">Icecream</a></li>
+    <li><a href="#"><img alt="" src="./img/icons/16/cog.png">Chocolate</a></li>
+</ul>
+
+<!-- Blue Tags -->
+
+<ul class="tags blue">
+    <li><a href="#">Pizza</a></li>
+    <li><a href="#">Icecream</a></li>
+    <li><a href="#"><img alt="" src="./img/icons/16/cog.png">Chocolate</a></li>
+</ul>
+
+]]></script> 
+      </section>
+      <section class="grid_5">
+        <ul class="tags">
+          <li><a href="#">Pizza</a></li>
+          <li><a href="#">Icecream</a></li>
+          <li><a href="#"><img alt="" src="./img/icons/16/cog.png">Chocolate</a></li>
+        </ul>
+        <br />
+        <ul class="tags blue">
+          <li><a href="#">Pizza</a></li>
+          <li><a href="#">Icecream</a></li>
+          <li><a href="#"><img alt="" src="./img/icons/16/cog.png">Chocolate</a></li>
+        </ul>
+      </section>
+      <br class="cl" />
+      <br />
+      <h4>Pagination</h4>
+      <p>Pagination has both a normal and small style. You can set the color by adding the class blue, red or green to the ul tag.</p>
+      <section class="grid_7"> 
+        <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+
+<!-- Default Pagination -->
+<div class="pagination">
+			<a href="#">&lt; First</a>
+			<a href="#">&lt; Prev</a>
+			<a href="#" class="number">1</a>
+			<a href="#" class="number">2</a>
+			<span class="dots">...</span>
+			<a href="#" class="number">5</a>
+			<a href="#" class="number current">6</a>
+			<a href="#" class="number">7</a>
+			<a href="#" class="number">8</a>
+			<a href="#" class="number">9</a>
+			<a href="#">Next &gt;</a>
+			<a href="#">Last &gt;</a>
+		</div>
+        <!-- Default Pagination Small -->
+        <div class="pagination small">
+			<a href="#">&lt;</a>
+			<a href="#" class="number">1</a>
+			<a href="#" class="number">2</a>
+			<span class="dots">...</span>
+			<a href="#" class="number">5</a>
+			<a href="#" class="number current">6</a>
+			<a href="#" class="number">7</a>
+			<a href="#" class="number">8</a>
+			<a href="#">&gt;</a>
+		</div>
+		<!-- Pagination Blue -->
+		<div class="pagination blue">
+			<a href="#">&lt; First</a>
+			<a href="#">&lt; Prev</a>
+			<a href="#" class="number">1</a>
+			<a href="#" class="number">2</a>
+			<span class="dots">...</span>
+			<a href="#" class="number">5</a>
+			<a href="#" class="number current">6</a>
+			<a href="#" class="number">7</a>
+			<a href="#" class="number">8</a>
+			<a href="#" class="number">9</a>
+			<a href="#">Next &gt;</a>
+			<a href="#">Last &gt;</a>
+		</div>
+]]></script> 
+      </section>
+      <section class="grid_5">
+        <div class="pagination"> <a href="#">&lt; First</a> <a href="#">&lt; Prev</a> <a href="#" class="number">1</a> <a href="#" class="number">2</a> <span class="dots">...</span> <a href="#" class="number">5</a> <a href="#" class="number current">6</a> <a href="#" class="number">7</a> <a href="#" class="number">8</a> <a href="#" class="number">9</a> <a href="#">Next &gt;</a> <a href="#">Last &gt;</a> </div>
+        <br />
+        <br />
+        <br />
+        <div class="pagination small"> <a href="#">&lt;</a> <a href="#" class="number">1</a> <a href="#" class="number">2</a> <span class="dots">...</span> <a href="#" class="number">5</a> <a href="#" class="number current">6</a> <a href="#" class="number">7</a> <a href="#" class="number">8</a> <a href="#">&gt;</a> </div>
+        <br />
+        <br />
+        <br />
+        <div class="pagination blue"> <a href="#">&lt; First</a> <a href="#">&lt; Prev</a> <a href="#" class="number">1</a> <a href="#" class="number">2</a> <span class="dots">...</span> <a href="#" class="number">5</a> <a href="#" class="number current">6</a> <a href="#" class="number">7</a> <a href="#" class="number">8</a> <a href="#" class="number">9</a> <a href="#">Next &gt;</a> <a href="#">Last &gt;</a> </div>
+      </section>
+      <br class="cl" />
+      <br />
+      <h3>File Tree</h3>
+      <section class="grid_7"> 
+        <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+<ul class="filetree">
+		<li><span class="folder">My Folder</span>
+			<ul>
+				<li><img src="./img/icons/16/page_white_flash.png" alt="" /><a href="#">Flash Object</a></li>
+			</ul>
+		</li>
+		<li><span class="folder">Components</span>
+			<ul>
+				<li><span class="folder">Flash</span>
+					<ul>
+                    <li><img src="./img/icons/16/page_white_flash.png" alt="" /><a href="#">Flash Object</a></li>
+                    <li><img src="./img/icons/16/page_white_flash.png" alt="" /><a href="#">Flash Object</a></li>
+                   <li><img src="./img/icons/16/page_code.png" alt="" /><a href="#">Coding Example</a></li>
+                </ul>
+				</li>
+				<li><img src="./img/icons/16/page_code.png" alt="" /><a href="#">Stuff</a></li>
+			</ul>
+		</li>
+		<li class="closed"><span class="folder">Clients</span>
+			<ul>
+                    <li><img src="./img/icons/16/page_white_acrobat.png" alt="" /><a href="#">Client Contact</a></li>
+                    <li><img src="./img/icons/16/page_white_acrobat.png" alt="" /><a href="#">Legal Docs</a></li>
+                    <li><img src="./img/icons/16/page_white_zip.png" alt="" /><a href="#">Docs Backup</a></li>
+                </ul>
+		</li>
+        
+        <li class="closed"><span class="folder">Images</span>
+                        <ul>
+                            <li><img src="./img/icons/16/image.png" alt="" /><a href="#">My Cat.png</a></li>
+                            <li><img src="./img/icons/16/image.png" alt="" /><a href="#">Staff01.jpg</a></li>
+                        </ul>
+                    </li>
+                    <li><img src="./img/icons/16/page_white.png" alt="" /><a href="#">Meeting Notes</a></li>
+	</ul>
+
+]]></script> 
+      </section>
+      <section class="grid_5">
+        <ul class="filetree">
+          <li><span class="folder">My Folder</span>
+            <ul>
+              <li><img src="./img/icons/16/page_white_flash.png" alt="" /><a href="#">Flash Object</a></li>
+            </ul>
+          </li>
+          <li><span class="folder">Components</span>
+            <ul>
+              <li><span class="folder">Flash</span>
+                <ul>
+                  <li><img src="./img/icons/16/page_white_flash.png" alt="" /><a href="#">Flash Object</a></li>
+                  <li><img src="./img/icons/16/page_white_flash.png" alt="" /><a href="#">Flash Object</a></li>
+                  <li><img src="./img/icons/16/page_code.png" alt="" /><a href="#">Coding Example</a></li>
+                </ul>
+              </li>
+              <li><img src="./img/icons/16/page_code.png" alt="" /><a href="#">Stuff</a></li>
+            </ul>
+          </li>
+          <li class="closed"><span class="folder">Clients</span>
+            <ul>
+              <li><img src="./img/icons/16/page_white_acrobat.png" alt="" /><a href="#">Client Contact</a></li>
+              <li><img src="./img/icons/16/page_white_acrobat.png" alt="" /><a href="#">Legal Docs</a></li>
+              <li><img src="./img/icons/16/page_white_zip.png" alt="" /><a href="#">Docs Backup</a></li>
+            </ul>
+          </li>
+          <li class="closed"><span class="folder">Images</span>
+            <ul>
+              <li><img src="./img/icons/16/image.png" alt="" /><a href="#">My Cat.png</a></li>
+              <li><img src="./img/icons/16/image.png" alt="" /><a href="#">Staff01.jpg</a></li>
+            </ul>
+          </li>
+          <li><img src="./img/icons/16/page_white.png" alt="" /><a href="#">Meeting Notes</a></li>
+        </ul>
+      </section>
+      <br class="cl" />
+      <br />
+      <h3><a id="form">Forms</a></h3>
+      <h4>Fieldsets &amp; Legends</h4>
+      <section class="grid_7"> 
+        <!-- Default Fieldset --> 
+        <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+	  
+	  	  <form action="" class="form" method="post">
+	  <fieldset>
+              <legend>Legend</legend>
+			  <p>Content Here</p>
+			  </fieldset>
+		<!-- Fieldset with grey background -->	  
+		<fieldset class="grey">
+              <legend>Legend</legend>
+			  <p>Content Here</p>
+			  </fieldset>	
+		<!-- Collapsible Fieldset -->	  
+			<fieldset>  
+			  <legend><a href="#" class="collapse">Legend</a></legend> 
+			  <p>Content Here</p>
+			  </fieldset>	
+	  </form>
+	  ]]></script> 
+      </section>
+      <section class="grid_5">
+        <form action="" class="form" method="post">
+          <!-- Default Fieldset -->
+          <fieldset>
+            <legend>Legend</legend>
+            <p>Content Here</p>
+          </fieldset>
+          <!-- Fieldset with grey background -->
+          <fieldset class="grey">
+            <legend>Legend</legend>
+            <p>Content Here</p>
+          </fieldset>
+          <!-- Collapsible Fieldset -->
+          <fieldset>
+            <legend><a href="#" class="collapse">Legend</a></legend>
+            <p>Content Here</p>
+          </fieldset>
+        </form>
+      </section>
+      <br class="cl" />
+      <br />
+      <h4>Fields &amp; Labels</h4>
+      <section class="grid_7"> 
+        <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+
+        <form action="" class="form" method="post">
+		<!-- Default label -->
+          <p>
+            <label for="field1">Default Label:</label>
+            <input type="text" name="field1" id="field1">
+          </p>
+		  <!-- Required label -->
+          <p>
+            <label for="field2"><span class="required">*</span> Required Feild:</label>
+            <input type="text" name="field2" id="field2">
+          </p>
+		  <!-- Small label - change class to big for bigger label -->
+          <p>
+            <label for="field3">Small Label:</label>
+            <input class="small" type="text" name="field3" id="field3">
+          </p>
+		  <!-- Select Box -->
+          <p>
+            <label for="dropdown">Dropdown:</label>
+            <select name="select" size="1" id="dropdown" tabindex="6">
+              <optgroup label="Lorem ipsum1">
+              <option value="1" selected="selected">Nunc urna nulla</option>
+              <option value="2">ultrices sit amet</option>
+              <option value="3">cursus faucibus</option>
+              <option value="4">tincidunt pellentesque</option>
+              <option value="5">ante</option>
+              </optgroup>
+              <optgroup label="Lorem ipsum2">
+              <option value="6">Nunc ac diam</option>
+              <option value="7">Donec orci risus</option>
+              <option value="8">malesuada quis</option>
+              <option value="9">vulputate eu</option>
+              <option value="10">lacinia in</option>
+              </optgroup>
+            </select>
+          </p>
+		  <!-- Checkboxes -->
+          <p>
+            <label>Checkboxes:</label>
+            <label>
+              <input type="checkbox" value="one" name="checkSet" tabindex="10">
+              One</label>
+            <label>
+              <input type="checkbox" value="two" name="checkSet" tabindex="11">
+              Two</label>
+            <label>
+              <input type="checkbox" value="three" name="checkSet" tabindex="12">
+              Three </label>
+          </p>
+		  <!-- Inline Radio Boxes -->
+          <p class="inline">
+            <label>Inline Radio Boxes:</label>
+            <label>
+              <input type="radio" value="uno" name="radioSet" tabindex="7">
+              Uno </label>
+            <label>
+              <input type="radio" value="due" name="radioSet" tabindex="8">
+              Due </label>
+            <label>
+              <input type="radio" value="tre" name="radioSet" tabindex="9">
+              Tre </label>
+          </p>
+        </form>
+
+]]></script> 
+      </section>
+      <section class="grid_5">
+        <form action="" class="form" method="post">
+          <!-- Default label -->
+          <p>
+            <label for="field1">Default Label:</label>
+            <input type="text" name="field1" id="field1">
+          </p>
+          <!-- Required label -->
+          <p>
+            <label for="field2"><span class="required">*</span> Required Feild:</label>
+            <input type="text" name="field2" id="field2">
+          </p>
+          <!-- Small label - change class to big for bigger label -->
+          <p>
+            <label for="field3">Small Label:</label>
+            <input class="small" type="text" name="field3" id="field3">
+          </p>
+          <!-- Select Box -->
+          <p>
+            <label for="dropdown">Dropdown:</label>
+            <select name="select" size="1" id="dropdown" tabindex="6">
+              <optgroup label="Lorem ipsum1">
+              <option value="1" selected="selected">Nunc urna nulla</option>
+              <option value="2">ultrices sit amet</option>
+              <option value="3">cursus faucibus</option>
+              <option value="4">tincidunt pellentesque</option>
+              <option value="5">ante</option>
+              </optgroup>
+              <optgroup label="Lorem ipsum2">
+              <option value="6">Nunc ac diam</option>
+              <option value="7">Donec orci risus</option>
+              <option value="8">malesuada quis</option>
+              <option value="9">vulputate eu</option>
+              <option value="10">lacinia in</option>
+              </optgroup>
+            </select>
+          </p>
+          <!-- Checkboxes -->
+          <p>
+            <label>Checkboxes:</label>
+            <label>
+              <input type="checkbox" value="one" name="checkSet" tabindex="10">
+              One</label>
+            <label>
+              <input type="checkbox" value="two" name="checkSet" tabindex="11">
+              Two</label>
+            <label>
+              <input type="checkbox" value="three" name="checkSet" tabindex="12">
+              Three </label>
+          </p>
+          <!-- Inline Radio Boxes -->
+          <p class="inline">
+            <label>Inline Radio Boxes:</label>
+            <label>
+              <input type="radio" value="uno" name="radioSet" tabindex="7">
+              Uno </label>
+            <label>
+              <input type="radio" value="due" name="radioSet" tabindex="8">
+              Due </label>
+            <label>
+              <input type="radio" value="tre" name="radioSet" tabindex="9">
+              Tre </label>
+          </p>
+        </form>
+      </section>
+      <br class="cl" />
+      <br />
+      <h4>Validation Styles</h4>
+      <p>You can apply validation styles to fields to give feedback to the user. They follow the same icon and color scheme as the notifications.</p>
+      <section class="grid_7"> 
+        <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+
+<form action="" class="form" method="post">
+<!-- Sucess Validation -->
+<input type="text" class="success" /><br /><br />
+<!-- Error Validation -->
+<input type="text" class="error" /><br /><br />
+<!-- Warning Validation -->
+<input type="text" class="warning" /><br /><br />
+<!-- Info Validation -->
+<input type="text" class="info" /><br /><br />
+<!-- Tip Validation -->
+<input type="text" class="tip" /><br /><br />
+</form>
+
+]]></script> 
+      </section>
+      <section class="grid_5 tc">
+        <form action="" class="form" method="post">
+          <input type="text" class="success" />
+          <br />
+          <br />
+          <input type="text" class="error" />
+          <br />
+          <br />
+          <input type="text" class="warning" />
+          <br />
+          <br />
+          <input type="text" class="info" />
+          <br />
+          <br />
+          <input type="text" class="tip" />
+          <br />
+          <br />
+        </form>
+      </section>
+      <br class="cl" />
+      <br />
+      <h4>Switches</h4>
+      <p>Switches mask a radio or check box input for a more visually appealing user experience. </p>
+      <section class="grid_7"> 
+        <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+
+	  <!-- Switch using radio inputs -->
+        <p class="switch-wrapper">
+          <input type="radio" checked="checked" name="field" id="yes1">
+          <input type="radio" name="field" id="no1">
+          <span class="switch-enable selected">Enable</span> <span class="switch-disable">Disable</span> </p>
+		  <!-- Switch using a checkbox -->
+        <p class="switch-wrapper"> <span class="switch-enable"><span>On</span></span> <span class="switch-disable selected"><span>Off</span></span>
+          <input type="checkbox" name="field2" class="checkbox">
+        </p>
+		<!-- Small switch using radio inputs -->
+        <p class="switch-wrapper small">
+          <input type="radio" checked="checked" name="field" id="yes2">
+          <input type="radio" name="field" id="no2">
+          <span class="switch-enable selected">Enable</span> <span class="switch-disable">Disable</span> </p>
+		  <!-- Small switch using a checkbox --> 
+        <p class="switch-wrapper small"> <span class="switch-enable"><span>On</span></span> <span class="switch-disable selected"><span>Off</span></span>
+          <input type="checkbox" name="field2" class="checkbox">
+        </p>
+
+
+]]></script> 
+      </section>
+      <section class="grid_5 tc">
+	  <!-- Switch using radio inputs -->
+        <p class="switch-wrapper">
+          <input type="radio" checked="checked" name="field" id="yes1">
+          <input type="radio" name="field" id="no1">
+          <span class="switch-enable selected">Enable</span> <span class="switch-disable">Disable</span> </p>
+		  <!-- Switch using a checkbox -->
+        <p class="switch-wrapper"> <span class="switch-enable"><span>On</span></span> <span class="switch-disable selected"><span>Off</span></span>
+          <input type="checkbox" name="field2" class="checkbox">
+        </p>
+		<!-- Small switch using radio inputs -->
+        <p class="switch-wrapper small">
+          <input type="radio" checked="checked" name="field" id="yes2">
+          <input type="radio" name="field" id="no2">
+          <span class="switch-enable selected">Enable</span> <span class="switch-disable">Disable</span> </p>
+		  <!-- Small switch using a checkbox --> 
+        <p class="switch-wrapper small"> <span class="switch-enable"><span>On</span></span> <span class="switch-disable selected"><span>Off</span></span>
+          <input type="checkbox" name="field2" class="checkbox">
+        </p>
+      </section>
+      <br class="cl" />
+      <br />
+      <h4>Buttons</h4>
+      <p>Buttons come in a range of colors and 3 sizes. You can also easily add an image.</p>
+      <section class="grid_7"> 
+        <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+
+	<!-- Default Button -->
+	<button type="button">Button</button>
+	<!-- Blue button -->
+	<button class="blue" type="button">Button</button>
+	<!-- Green button -->
+	<button class="green" type="button">Button</button>
+	<!-- Red button -->
+	<button class="red" type="button">Button</button>
+	<!-- Grey button -->
+	<button class="grey" type="button">Button</button>
+	<!-- Disabled button -->
+	<button class="disabled" type="button">Button</button>
+	<!-- Large button -->
+	<button class="blue large" type="button">Button</button>
+	<!-- Small button -->
+	<button class="blue small" type="button">Button</button>
+	<!-- Button with image -->
+	<button class="blue" type="button"><img alt="rss" src="./img/icons/button/rss-inv.png"> RSS</button>
+
+]]></script> 
+      </section>
+      <section class="grid_5 tc"> 
+        
+        <!-- Default Button -->
+        <button type="button">Button</button>
+        <!-- Blue button -->
+        <button class="blue" type="button">Button</button>
+        <!-- Green button -->
+        <button class="green" type="button">Button</button>
+        <!-- Red button -->
+        <button class="red" type="button">Button</button>
+        <!-- Grey button -->
+        <button class="grey" type="button">Button</button>
+        <!-- Disabled button -->
+        <button class="disabled" type="button">Button</button>
+        <!-- Large button -->
+        <button class="blue large" type="button">Button</button>
+        <!-- Small button -->
+        <button class="blue small" type="button">Button</button>
+        <!-- Button with image -->
+        <button class="blue" type="button"><img alt="rss" src="./img/icons/button/rss-inv.png"> RSS</button>
+      </section>
+      <br class="cl" />
+      <br />
+      <h4>Notifications</h4>
+      <section class="grid_7"> 
+        <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+
+        <!-- Success notification -->
+        <div class="notification success"> <span class="strong">Success!</span> This is a success message. </div>
+        <!-- Error notification -->
+        <div class="notification error"> <span class="strong">Error!</span> This is a error message. </div>
+        <!-- Warning notification -->
+        <div class="notification warning"> <span class="strong">Warning!</span> This is a warning message. </div>
+        <!-- Info notification -->
+        <div class="notification info"> <span class="strong">Information:</span> This is a informative message. </div>
+        <!-- Tip notification -->
+        <div class="notification tip"> <span class="strong">Tip:</span> This is a tip message. </div>
+        <!-- Add the nopic class to remove the image -->
+        <div class="notification success nopic"> <span class="strong">Success!</span> This is a success message. </div>
+
+]]></script> 
+      </section>
+      <section class="grid_5"> 
+        
+        <!-- Success notification -->
+        <div class="notification success"> <span class="strong">Success!</span> This is a success message. </div>
+        <!-- Error notification -->
+        <div class="notification error"> <span class="strong">Error!</span> This is a error message. </div>
+        <!-- Warning notification -->
+        <div class="notification warning"> <span class="strong">Warning!</span> This is a warning message. </div>
+        <!-- Info notification -->
+        <div class="notification info"> <span class="strong">Information:</span> This is a informative message. </div>
+        <!-- Tip notification -->
+        <div class="notification tip"> <span class="strong">Tip:</span> This is a tip message. </div>
+        <!-- Add the nopic class to remove the image -->
+        <div class="notification success nopic"> <span class="strong">Success!</span> This is a success message. </div>
+      </section>
+      <br class="cl" />
+      <br />
+      <h4>Progress </h4>
+      <br class="cl" />
+      <br />
+      <p>The HTML <code>&lt;progress&gt;</code> tag is used for representing the progress of a task. The element has been styled with 4 different color options.</p>
+      <section class="grid_7"> 
+        <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+
+      <!-- Progress Bar -->
+      <progress class="progress-bar"> <span style="width: 68%;">68%</span> </progress><br />
+      <!-- Progress Bar Blue -->
+      <progress class="progress-bar blue"> <span style="width: 68%;">68%</span> </progress><br />
+      <!-- Progress Bar Red -->
+      <progress class="progress-bar red"> <span style="width: 68%;">68%</span> </progress><br />
+      <!-- Progress Bar Green -->
+      <progress class="progress-bar green"> <span style="width: 68%;">68%</span> </progress><br />
+
+]]></script> 
+      </section>
+      <section class="grid_5 tc"> 
+        <!-- Progress Bar -->
+        <progress class="progress-bar"> <span style="width: 68%;">68%</span> </progress>
+        <br />
+        <br />
+        <!-- Progress Bar Blue -->
+        <progress class="progress-bar blue"> <span style="width: 68%;">68%</span> </progress>
+        <br />
+        <br />
+        <!-- Progress Bar Red -->
+        <progress class="progress-bar red"> <span style="width: 68%;">68%</span> </progress>
+        <br />
+        <br />
+        <!-- Progress Bar Green -->
+        <progress class="progress-bar green"> <span style="width: 68%;">68%</span> </progress>
+        <br />
+        <br />
+      </section>
+      <br class="cl" />
+      <br />
+      <h3><a id="gallery">Gallery</a></h3>
+      <section class="grid_7"> 
+        <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+
+ <ul class="gallery">
+      <li><a href="../img/gallery/01.jpg"><img src="../img/gallery/01-thumb.jpg" alt="" /></a></li>
+      <li><a href="../img/gallery/02.jpg"><img src="../img/gallery/02-thumb.jpg" alt="" /></a></li>
+      <li><a href="../img/gallery/03.jpg"><img src="../img/gallery/03-thumb.jpg" alt="" /></a></li>
+      <li><a href="../img/gallery/04.jpg"><img src="../img/gallery/04-thumb.jpg" alt="" /></a></li>
+      <li><a href="../img/gallery/01.jpg"><img src="../img/gallery/01-thumb.jpg" alt="" /></a></li>
+      <li><a href="../img/gallery/02.jpg"><img src="../img/gallery/02-thumb.jpg" alt="" /></a></li>
+      <li><a href="../img/gallery/03.jpg"><img src="../img/gallery/03-thumb.jpg" alt="" /></a></li>
+      <li><a href="../img/gallery/04.jpg"><img src="../img/gallery/04-thumb.jpg" alt="" /></a></li>
+       </ul>
+
+]]></script> 
+      </section>
+      <section class="grid_5">
+        <ul class="gallery">
+          <li><a href="../img/gallery/01.jpg"><img src="../img/gallery/01-thumb.jpg" alt="" /></a></li>
+          <li><a href="../img/gallery/02.jpg"><img src="../img/gallery/02-thumb.jpg" alt="" /></a></li>
+          <li><a href="../img/gallery/03.jpg"><img src="../img/gallery/03-thumb.jpg" alt="" /></a></li>
+          <li><a href="../img/gallery/04.jpg"><img src="../img/gallery/04-thumb.jpg" alt="" /></a></li>
+          <li><a href="../img/gallery/01.jpg"><img src="../img/gallery/01-thumb.jpg" alt="" /></a></li>
+          <li><a href="../img/gallery/02.jpg"><img src="../img/gallery/02-thumb.jpg" alt="" /></a></li>
+          <li><a href="../img/gallery/03.jpg"><img src="../img/gallery/03-thumb.jpg" alt="" /></a></li>
+          <li><a href="../img/gallery/04.jpg"><img src="../img/gallery/04-thumb.jpg" alt="" /></a></li>
+        </ul>
+      </section>
+      <br class="cl" />
+    </section>
+    <br class="cl" />
+    <br />
+  </div>
+</div>
+
+<!-- footer -->
+<footer> Copyright ©2010, A <a href="http://iamchrismooney.com">Chris Mooney</a> for <a href="http://themeforest.net?ref=ChrisMooney">Theme Forest</a>. </footer>
+<!-- footer end --> 
+
+<!-- Javascript at the bottom for fast page loading --> 
+<script type="text/javascript" src="http://www.google.com/jsapi"></script> 
+<!-- Grab Google CDN's jQuery + jQuery UI. fall back to local if necessary --> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+<script>!window.jQuery && document.write('<script src="../js/jquery-1.4.2.min.js"><\/script>')</script> 
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script> 
+<script>!window.jQuery && document.write('<script src="../js/jquery-ui-1.8.1.min.js"><\/script>')</script> 
+<script type="text/javascript" src="../js/jquery.tipsy.js"></script> 
+<script type="text/javascript" src="../js/jquery.treeview.min.js"></script> 
+<script type="text/javascript" src="../js/jquery.cookie.js"></script> 
+<script type="text/javascript" src="../js/jquery.lightbox-0.5.min.js"></script> 
+<script type="text/javascript" src="../js/jquery.wysiwyg.js"></script> 
+<script type="text/javascript" src="../js/functions.js"></script> 
+<!--[if lt IE 7 ]>
+    <script src="js/dd_belatedpng.js"></script>
+  <![endif]-->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-587119-24']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
