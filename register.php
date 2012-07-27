@@ -130,7 +130,7 @@ $totalRows_rsServices = mysql_num_rows($rsServices);
 <title>Kid Registration</title>
 <link rel="stylesheet" href="css/text.css" />
 <link rel="stylesheet" href="css/formalize.css" />
-<script src="js/jquery-1.4.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="js/jquery.formalize.min.js"></script>
 <style>
 th {
@@ -146,6 +146,7 @@ th {
 
 <body>
 <h3>Tadika Cahaya Raudhah Kid Registration</h3>
+<p>Fill up all the details below:</p>
 <form action="<?php echo $editFormAction; ?>" method="post" name="form1" id="form1">
   <table width="600" align="left">
     <tr valign="baseline">
@@ -183,7 +184,7 @@ th {
       <td nowrap="nowrap" align="right">Date of Birth DD/MM/YYYY</td>
       <td>
       <input type="number" id="number" name="c_dob_day" min="1" max="31" step="1" placeholder="Day"> <input type="number" id="number" name="c_dob__month" min="1" max="12" step="1" placeholder="Month"> <input type="number" id="number" name="c_dob_year" min="2000" max="2010" step="1" placeholder="Year">
-       </td>
+      </td>
     </tr>
     <tr valign="baseline">
       <td nowrap="nowrap" align="right">Age</td>
@@ -316,7 +317,7 @@ do {
     <tr valign="baseline">
       <td nowrap="nowrap" align="right">Email</td>
       <td>
-      <input type="email" id="email" name="a_email" placeholder="name@example.com"></td>
+      <input type="email" id="email" name="a_email" placeholder="name@example.com"> <span id="email_valid" style="color:green"></span><span id="email_invalid" style="color:red"></span></td>
     </tr>
     <tr valign="baseline">
       <td nowrap="nowrap" align="right">&nbsp;</td>
@@ -366,7 +367,7 @@ do {
     </tr>
     <tr valign="baseline">
       <td nowrap="nowrap" align="right">&nbsp;</td>
-      <td><input type="submit" value="Submit Form" /></td>
+      <td><input type="submit" value="Submit Form" id="btnSubmitRegister" /></td>
     </tr>
   </table>
   <input type="hidden" name="no" value="" />
@@ -376,6 +377,43 @@ do {
 </form>
 <p>&nbsp;</p>
 </body>
+<script type="text/javascript">
+$(document).ready(function(e) {
+	var btnSubmitRegister = $('#btnSubmitRegister');
+	btnSubmitRegister.attr('disabled', 'disabled');
+	
+	$('#email').keyup(function(){
+		
+		var email = $('#email').val();
+		console.log(email);	
+		
+		$.ajax({
+			type: "GET",
+			url: "email_checking.php",
+			data: "email="+email,
+			success: function(html){
+				if(html == "Not Available.") {
+					
+					$('span#email_invalid').fadeIn();
+					$('span#email_invalid').text(html);
+					$('span#email_valid').hide();
+					
+					btnSubmitRegister.attr('disabled', 'disabled');
+				}
+				if(html == "This email is available to be use.") {
+
+					btnSubmitRegister.removeAttr('disabled');
+					
+					$('span#email_valid').fadeIn();
+					$('span#email_valid').text(html);
+					$('span#email_invalid').hide();
+				}
+				
+			}
+		});
+	});
+});
+</script>
 </html>
 <?php
 mysql_free_result($rsCitizen);

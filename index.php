@@ -115,7 +115,7 @@ if (isset($_POST['Username'])) {
     <h2>TCR Management</h2>
   </div>
   <div class="box">
-  <div class="notification tip"> <span class="strong">Tip:</span> Just press login for the demo. </div>
+  <div class="notification tip"> Login with your username and password. </div>
     <form action="<?php echo $loginFormAction; ?>" method="POST" class="form col" id="tcrlogin">
       <p>
         <label class="strong" for="Username">Name:</label>
@@ -126,14 +126,14 @@ if (isset($_POST['Username'])) {
         <input tabindex="2" id="Password" type="password" name="Password" title="Please enter your password." />
       </p>
       <p class="no-margin">
-        <label for="RememberMe">
+        <label for="RememberMe" style="display:none">
           <input id="RememberMe" type="checkbox">
           Remember Me?</label>
         <button type="submit" class="small fr">Login</button>
         <br class="cl" />
       </p>
     </form>
-    <form method="post" class="form" action="">
+    <form method="post" class="form" action="" style="display:none">
       <fieldset class="grey collapsed no-margin">
         <legend><a href="#">Forgot Password?</a></legend>
         <p>
